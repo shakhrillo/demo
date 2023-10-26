@@ -42,6 +42,7 @@ import ForgotPassword from "./pages/auth/forgot-password";
 import Countries from "./pages/account/countries";
 import Preference from "./pages/account/preference";
 import Expertise from "./pages/account/expertise";
+import Filter from "./pages/account/filter";
 
 setupIonicReact();
 
@@ -90,6 +91,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/expertise">
           <Expertise />
+        </Route>
+        <Route exact path="/filter">
+          <Filter />
         </Route>
       </IonRouterOutlet>
       {/* <IonTabBar slot="bottom">
