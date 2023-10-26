@@ -4,10 +4,8 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonThumbnail,
   IonItem,
   IonText,
-  IonCard,
   IonInput,
   IonCheckbox,
   IonButton,
@@ -17,6 +15,10 @@ import {
   IonImg,
 } from '@ionic/react';
 import './index.css';
+import logo from '../../../assets/images/logo.jpeg';
+import facebookIcon from '../../../assets/images/facebook-icon.jpeg';
+import googleIcon from '../../../assets/images/google-icon.png';
+import appleIcon from '../../../assets/images/apple-icon.png';
 
 import imgLogo from '../../../assets/images/logo.jpeg';
 
@@ -30,37 +32,62 @@ export default function (): JSX.Element {
       </IonHeader>
 
       <IonContent>
-        <IonCard className='container-login'>
-          <IonThumbnail>
-            <IonImg
-              src={imgLogo}
-              style={{ width: 200 }}
-              alt='The Wisconsin State Capitol building in Madison, WI at night'
-            ></IonImg>
-          </IonThumbnail>
-          <IonText class='head-text'>Lorem, ipsum dolor.</IonText>
-          <IonInput placeholder='Enter username' />
-          <IonInput type='password' placeholder='Enter password' />
-          <IonCheckbox labelPlacement='end'>
-            I agree to the terms and conditions
-          </IonCheckbox>
-          <IonButton>Login</IonButton>
-          <br />
-          <IonText>
-            Lorem ipsum dolor sit amet consectetur adipisicing Lorem, ipsum
-            dolor..
-          </IonText>
-          <br />
-          <IonItem>
-            <IonButton>start</IonButton>
-            <IonButton>center</IonButton>
-            <IonButton>end</IonButton>
-          </IonItem>
-          <IonText>
-            Lorem ipsum dolor sit amet consectetur adipisicing Lorem, ipsum
-            dolor..
-          </IonText>
-        </IonCard>
+        <IonGrid style={{ padding: 10 }}>
+          <IonRow>
+            <IonCol class='login-container'>
+              <IonImg style={{ width: '80%' }} src={logo}></IonImg>
+              <IonText class='head-text'>
+                <h1>Create New Account</h1>
+              </IonText>
+              <IonInput
+                placeholder='Username'
+                type='text'
+                class='custom'
+              ></IonInput>
+              <IonInput
+                placeholder='Password'
+                type='password'
+                class='custom'
+              ></IonInput>
+              <IonCheckbox labelPlacement='end'>Remember me</IonCheckbox>
+              <IonButton style={{ width: '100%' }} shape='round' expand='full'>
+                Sign up
+              </IonButton>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+
+        <IonGrid style={{ padding: 10 }}>
+          <IonRow>
+            <IonCol class='login-container'>
+              <IonText>or continue with</IonText>
+              <br />
+              <IonItem>
+                <IonButton color='light' fill='outline' style={{ width: 55 }}>
+                  <IonImg
+                    style={{ width: 30, height: 30 }}
+                    src={facebookIcon}
+                  ></IonImg>
+                </IonButton>
+                <IonButton color='light' fill='outline' style={{ width: 55 }}>
+                  <IonImg
+                    style={{ width: 30, height: 30 }}
+                    src={googleIcon}
+                  ></IonImg>
+                </IonButton>
+                <IonButton color='light' fill='outline' style={{ width: 55 }}>
+                  <IonImg
+                    style={{ width: 30, height: 30 }}
+                    src={appleIcon}
+                  ></IonImg>
+                </IonButton>
+              </IonItem>
+              <IonText>
+                Already have an account? <a href='#'>Sign in</a>
+              </IonText>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );
