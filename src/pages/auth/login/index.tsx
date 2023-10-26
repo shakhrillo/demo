@@ -11,10 +11,12 @@ import {
   IonInput,
   IonCheckbox,
   IonButton,
-  IonButtons,
+  IonCol,
+  IonGrid,
+  IonRow,
   IonImg,
 } from '@ionic/react';
-import './login.css';
+import './index.css';
 
 import imgLogo from '../../../assets/images/logo.jpeg';
 
@@ -31,10 +33,10 @@ export default function (): JSX.Element {
         <IonCard className='container-login'>
           <IonThumbnail>
             <IonImg
-              src={ imgLogo }
+              src={imgLogo}
               style={{ width: 200 }}
-              alt="The Wisconsin State Capitol building in Madison, WI at night">
-            </IonImg>
+              alt='The Wisconsin State Capitol building in Madison, WI at night'
+            ></IonImg>
           </IonThumbnail>
           <IonText class='head-text'>Lorem, ipsum dolor.</IonText>
           <IonInput placeholder='Enter username' />
