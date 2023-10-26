@@ -41,6 +41,7 @@ import Login from "./pages/auth/login";
 import ForgotPassword from "./pages/auth/forgot-password";
 import Countries from "./pages/account/countries";
 import Preference from "./pages/account/preference";
+import Expertise from "./pages/account/expertise";
 
 setupIonicReact();
 

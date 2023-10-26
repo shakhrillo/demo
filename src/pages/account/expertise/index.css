@@ -1,0 +1,13 @@
+.expertise-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.expertise-box {
+  border: solid 1px rgb(200, 199, 204, 1) !important;
+  margin: 10px;
+  border-radius: 12px;
+}

@@ -38,7 +38,7 @@ export default function (): JSX.Element {
             <IonList lines="none" style={{ width: "100%" }}>
               <IonRadioGroup>
                 {results.map((result, i) => (
-                  <IonItem key={i} style={{ background: "red" }}>
+                  <IonItem key={i}>
                     <IonRadio
                       value={result}
                       justify="start"
