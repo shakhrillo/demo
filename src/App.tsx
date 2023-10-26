@@ -33,6 +33,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Splash from './pages/onboarding/splash';
+import Welcome from './pages/onboarding/welcome';
+import Walkthrough from './pages/onboarding/walkthrough';
+import Register from './pages/auth/register';
+import Login from './pages/auth/login';
+import ForgotPassword from './pages/auth/forgot-password';
 
 setupIonicReact();
 
@@ -53,6 +59,28 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
+
+
+          {/* Pages */}
+          <Route exact path="/splash">
+            <Splash />
+          </Route>
+          <Route exact path="/welcome">
+            <Welcome />
+          </Route>
+          <Route exact path="/walkthrough">
+            <Walkthrough />
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/forgot-password">
+            <ForgotPassword />
+          </Route>
+
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
