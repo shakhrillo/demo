@@ -12,8 +12,11 @@ import {
   IonCheckbox,
   IonButton,
   IonButtons,
+  IonImg,
 } from '@ionic/react';
 import './login.css';
+
+import imgLogo from '../../../assets/images/logo.jpeg';
 
 export default function (): JSX.Element {
   return (
@@ -27,7 +30,11 @@ export default function (): JSX.Element {
       <IonContent>
         <IonCard className='container-login'>
           <IonThumbnail>
-            <img src='https://ionicframework.com/docs/demos/api/card/madison.jpg' />
+            <IonImg
+              src={ imgLogo }
+              style={{ width: 200 }}
+              alt="The Wisconsin State Capitol building in Madison, WI at night">
+            </IonImg>
           </IonThumbnail>
           <IonText class='head-text'>Lorem, ipsum dolor.</IonText>
           <IonInput placeholder='Enter username' />
