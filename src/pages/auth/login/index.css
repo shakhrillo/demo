@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 7px;
+  justify-content: space-between;
   padding-top: 30px;
 }
 
 .settings {
   gap: 15px;
+}
+
+.new-password {
+  gap: 25px;
 }
 
 ion-input.custom {
