@@ -50,6 +50,7 @@ import Home from './pages/main/home';
 import WorkExperience from './pages/account/work-experience';
 import User from './pages/account/user';
 import LinkedAccount from './pages/account/linked-account';
+import JobDetails from './pages/main/job-details/index'
 
 setupIonicReact();
 
@@ -112,11 +113,8 @@ const App: React.FC = () => (
           <Route exact path='/expertise'>
             <Expertise />
           </Route>
-          <Route exact path='/user'>
-            <User />
-          </Route>
-          <Route exact path='/linked-account'>
-            <LinkedAccount />
+          <Route exact path='/job-details'>
+            <JobDetails />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot='bottom'>
