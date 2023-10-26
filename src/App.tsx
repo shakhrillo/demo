@@ -32,20 +32,20 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import "./theme/variables.css";
-import Splash from "./pages/onboarding/splash";
-import Welcome from "./pages/onboarding/welcome";
-import Walkthrough from "./pages/onboarding/walkthrough";
-import Register from "./pages/auth/register";
-import Login from "./pages/auth/login";
-import ForgotPassword from "./pages/auth/forgot-password";
-import Countries from "./pages/account/countries";
-import Preference from "./pages/account/preference";
-import Settings from "./pages/account/settings";
-import Expertise from "./pages/account/expertise";
-import NewPassword from "./pages/auth/new-password";
-import Home from "./pages/main/home";
-import User from "./pages/account/user";
+import './theme/variables.css';
+import Splash from './pages/onboarding/splash';
+import Welcome from './pages/onboarding/welcome';
+import Walkthrough from './pages/onboarding/walkthrough';
+import Register from './pages/auth/register';
+import Login from './pages/auth/login';
+import ForgotPassword from './pages/auth/forgot-password';
+import Countries from './pages/account/countries';
+import Preference from './pages/account/preference';
+import Settings from './pages/account/settings';
+import Expertise from './pages/account/expertise';
+import NewPassword from './pages/auth/new-password';
+import Home from './pages/main/home';
+import Notification from './pages/main/notification';
 
 setupIonicReact();
 
@@ -57,8 +57,8 @@ const App: React.FC = () => (
           <Route exact path="/tab1">
             <Home />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path='/tab2'>
+            <Notification />
           </Route>
           <Route path="/tab3">
             <Tab3 />
