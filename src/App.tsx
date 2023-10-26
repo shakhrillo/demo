@@ -44,6 +44,7 @@ import Preference from './pages/account/preference';
 import Settings from './pages/account/settings';
 import Expertise from './pages/account/expertise';
 import NewPassword from './pages/auth/new-password';
+import Home from './pages/main/home';
 
 setupIonicReact();
 
@@ -53,10 +54,7 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path='/tab1'>
-            <Tab1 />
-          </Route>
-          <Route exact path='/tab1'>
-            <Tab1 />
+            <Home />
           </Route>
           <Route exact path='/tab2'>
             <Tab2 />

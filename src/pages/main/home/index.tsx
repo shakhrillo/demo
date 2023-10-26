@@ -1,6 +1,6 @@
 import { IonContent, IonPage, IonGrid, IonRow, IonCol, IonText, IonIcon, IonButton,IonList, IonItem, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle } from '@ionic/react';
 import './index.css'
-import Google from '../../assets/images/google.png'
+import Google from '../../../assets/images/google.png'
 import { save } from 'ionicons/icons';
 
 export default function(): JSX.Element {
