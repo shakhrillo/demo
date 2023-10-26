@@ -43,12 +43,14 @@
     width: 100%;
     border: 1px solid grey;
     border-radius: 40px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     gap: 20px;
     justify-content: start;
+    align-items: center;
 }
-.img-forgotPassword{
-    object-fit: contain;
-    width: 70px;
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

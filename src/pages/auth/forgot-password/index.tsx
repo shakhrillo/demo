@@ -16,32 +16,32 @@ export default function(): JSX.Element {
             <IonRow>
               <IonCol>
                 <IonText>
-                  <p>Select which contact details should we use to reset your password</p>
+                  Select which contact details should we use to reset your password
                 </IonText>
               </IonCol>
             </IonRow>
             <IonRow style={{width:"100%"}}>
             <IonCol class='select-horizon'>
-                <img className='img-forgotPassword'  src={Message} alt="" />
-                <IonCol>
+                <img style={{width:"100px"}} src={Message} alt="" />
+                <IonCol class='texts'>
                   <IonText color="medium">
-                    <p>via sms</p>
+                    via sms
                   </IonText>
                   <IonText>
-                    <p>+1 111 ******00</p>
+                    +1 111 ******00
                   </IonText>
                 </IonCol>
               </IonCol>
             </IonRow>
             <IonRow style={{width:"100%"}}>
             <IonCol class='select-horizon'>
-                <img className='img-forgotPassword'  src={Message} alt="" />
-                <IonCol>
+                <img style={{width:"100px"}} src={Message} alt="" />
+                <IonCol class='texts'>
                   <IonText color="medium">
-                    <p>via email</p>
+                    via email
                   </IonText>
                   <IonText>
-                    <p>and***loy@gmail.com</p>
+                    and***loy@gmail.com
                   </IonText>
                 </IonCol>
               </IonCol>
