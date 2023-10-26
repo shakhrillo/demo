@@ -1,10 +1,18 @@
-import { IonContent, IonPage } from '@ionic/react';
+import { IonContent, IonPage, IonImg, IonSpinner } from '@ionic/react';
+import './splash.css'
 
 export default function(): JSX.Element {
   return (
-    <IonPage>
+    <IonPage className="page">
       <IonContent>
-        <h1>Splash</h1>
+      <div className='content'>
+      <IonImg
+      className='img'
+        src="https://docs-demo.ionic.io/assets/madison.jpg"
+        alt="The Wisconsin State Capitol building in Madison, WI at night">
+      </IonImg>
+      <IonSpinner></IonSpinner>
+      </div>
       </IonContent>
     </IonPage>
   );
