@@ -2,6 +2,7 @@ import { IonPage, IonImg, IonSpinner, IonRow, IonCol, IonGrid } from '@ionic/rea
 import imgLogo from '../../../assets/images/logo.jpeg';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
+import './index.css'
 
 export default function(): JSX.Element {
 
@@ -15,7 +16,7 @@ export default function(): JSX.Element {
 
   return (
     <IonPage>
-      <IonGrid class='container'>
+      <IonGrid class='splash-container'>
         <IonRow>
           <IonCol>
             <IonImg
@@ -24,10 +25,8 @@ export default function(): JSX.Element {
               alt="The Wisconsin State Capitol building in Madison, WI at night">
             </IonImg>
           </IonCol>
-        </IonRow>
-        <IonRow style={{height: 40, marginTop: 'auto', marginBottom: 60}}>
-          <IonCol>
-            <IonSpinner></IonSpinner>
+          <IonCol class='splash-spinner'>
+            <IonSpinner class='spinner' color='primary' name="bubbles"></IonSpinner>
           </IonCol>
         </IonRow>
       </IonGrid>
