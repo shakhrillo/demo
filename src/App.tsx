@@ -67,12 +67,6 @@ const App: React.FC = () => (
           <Route exact path='/'>
             <Redirect to='/tab1' />
           </Route>
-          {/* Pages */}
-          <Route exact path='/'>
-            <Redirect to='/tab1' />
-          </Route>
-
-          {/* Pages */}
           <Route exact path='/'>
             <Splash />
           </Route>
@@ -107,7 +101,7 @@ const App: React.FC = () => (
             <Expertise />
           </Route>
         </IonRouterOutlet>
-        {/* <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon aria-hidden="true" icon={triangle} />
             <IonLabel>Tab 1</IonLabel>
@@ -120,7 +114,7 @@ const App: React.FC = () => (
             <IonIcon aria-hidden='true' icon={square} />
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
-        </IonTabBar> */}
+        </IonTabBar>
       </IonTabs>
     </IonReactRouter>
   </IonApp>
