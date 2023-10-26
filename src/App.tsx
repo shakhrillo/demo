@@ -44,6 +44,7 @@ import Preference from "./pages/account/preference";
 import Settings from "./pages/account/settings";
 import Expertise from "./pages/account/expertise";
 import Filter from "./pages/account/filter";
+import Main from './pages/Home/main'
 
 setupIonicReact();
 
@@ -98,6 +99,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/filter">
           <Filter />
+          </Route>
+        <Route exact path="/main">
+          <Main />
         </Route>
       </IonRouterOutlet>
       {/* <IonTabBar slot="bottom">
