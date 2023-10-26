@@ -1,28 +1,48 @@
-import { IonContent, IonPage, IonImg, IonText, IonButton } from '@ionic/react';
+import { IonContent, IonPage, IonImg, IonText, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
 import './index.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import '@ionic/react/css/ionic-swiper.css';
 
 export default function (): JSX.Element {
   return (
     <IonPage>
       <IonContent>
-        <div className='container-walk'>
-          <IonImg
-            class='img-walk'
-            src='https://ionicframework.com/docs/demos/api/card/madison.jpg'
-          />
-          <IonText class='head-text'>
-            Lorem ipsum dolor sit amet Lorem, ipsum dolor..
-          </IonText>
-          <IonText>
-            Lorem ipsum dolor, sit amet consectetur adipisicing.
-          </IonText>
-          <div className='circles'>
-            <div className='circle active'></div>
-            <div className='circle'></div>
-            <div className='circle'></div>
-          </div>
-          <IonButton>Click Me</IonButton>
-        </div>
+        <Swiper>
+          <SwiperSlide>
+            <IonGrid>
+              <IonRow>
+                <IonCol>
+                  <IonImg
+                    src='https://loremflickr.com/320/500'
+                  />
+                </IonCol>
+              </IonRow>
+              <IonRow>    
+                <IonCol>
+                  <IonText class='head-text'>
+                    Lorem ipsum dolor sit amet Lorem, ipsum dolor..
+                  </IonText>
+                </IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol>
+                  <IonText>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing.
+                  </IonText>
+                </IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol>
+                  <IonButton expand="block">Next</IonButton>
+                </IonCol>
+              </IonRow>
+            </IonGrid>
+          </SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+        </Swiper>
       </IonContent>
     </IonPage>
   );
