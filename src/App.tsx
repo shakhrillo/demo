@@ -47,6 +47,7 @@ import NewPassword from './pages/auth/new-password';
 import Home from './pages/main/home';
 import Notification from './pages/main/notification';
 import User from "./pages/account/user";
+import LinkedAccount from "./pages/account/linked-account";
 
 setupIonicReact();
 
@@ -102,6 +103,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/user">
             <User />
+          </Route>
+          <Route exact path="/linked-account">
+            <LinkedAccount />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
