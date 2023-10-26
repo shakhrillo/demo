@@ -1,4 +1,4 @@
-import { IonPage, IonImg, IonSpinner, IonRow, IonCol, IonGrid } from '@ionic/react';
+import { IonPage, IonImg, IonSpinner, IonRow, IonCol, IonGrid, IonText, IonButton } from '@ionic/react';
 import imgLogo from '../../../assets/images/logo.jpeg';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
@@ -27,6 +27,9 @@ export default function(): JSX.Element {
           </IonCol>
           <IonCol class='splash-spinner'>
             <IonSpinner class='spinner' color='primary' name="bubbles"></IonSpinner>
+            {/* <IonButton routerLink="/login">
+              <IonText>welcome</IonText>
+            </IonButton> */}
           </IonCol>
         </IonRow>
       </IonGrid>

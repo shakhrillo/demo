@@ -1,4 +1,4 @@
-import { IonGrid, IonPage, IonText, IonRow, IonCol } from "@ionic/react";
+import { IonGrid, IonPage, IonText, IonRow, IonCol, IonButton } from "@ionic/react";
 import { useEffect } from "react";
 import { useHistory } from "react-router";
 import "./index.css";
@@ -6,15 +6,13 @@ import "./index.css";
 export default function (): JSX.Element {
   const history = useHistory();
 
-  useEffect(() => {
-    // setTimeout(() => {
-    //   history.push('walkthrough')
-    // }, 2000);
-  }, []);
+  const navigate = () => {
+    history.replace('walkthrough')
+  }
 
   return (
     <IonPage>
-      <IonGrid className="welcome-cotainer">
+      <IonGrid onClick={navigate} className="welcome-cotainer">
         <IonRow style={{ marginTop: "auto" }}>
           <IonCol>
             <IonText>
