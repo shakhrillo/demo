@@ -15,6 +15,16 @@
   gap: 25px;
 }
 
+.user-settings {
+  align-items: start;
+  gap: 10px;
+}
+
+.contact-informations {
+  height: 100%;
+  justify-content: space-between;
+}
+
 ion-input.custom {
   --background: #f9f8f8;
   --placeholder-opacity: 0.8;
@@ -33,4 +43,29 @@ ion-select.custom {
   --padding-end: 10px;
   --padding-start: 10px;
   --padding-top: 10px;
+}
+
+ion-textarea.custom {
+  --background: #f9f8f8;
+  --placeholder-opacity: 0.8;
+  --border-radius: 10px;
+  --padding-bottom: 10px;
+  --padding-end: 10px;
+  --padding-start: 10px;
+  --padding-top: 10px;
+  height: 100px;
+}
+
+.file-input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  text-align: center;
 }
