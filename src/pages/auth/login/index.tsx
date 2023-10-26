@@ -83,7 +83,7 @@ export default function (): JSX.Element {
                 </IonButton>
               </IonItem>
               <IonText>
-                Already have an account? <a href='#'>Sign in</a>
+                Already have an account? <a href='/register' >Sign in</a>
               </IonText>
             </IonCol>
           </IonRow>

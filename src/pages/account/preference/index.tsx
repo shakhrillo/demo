@@ -1,4 +1,4 @@
-import { IonContent, IonPage, IonImg, IonText, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonContent, IonPage, IonImg, IonText, IonButton, IonGrid, IonRow, IonCol, IonToolbar, IonButtons, IonBackButton, IonTitle } from '@ionic/react';
 import '../../complete.css'
 import imgLogo from '../../../assets/images/logo.jpeg'
 import Case from '../../../assets/images/case.webp'
@@ -7,6 +7,12 @@ import User from '../../../assets/images/user.png'
 export default function (): JSX.Element {
   return (
     <IonPage>
+      <IonToolbar>
+          <IonButtons slot="start">
+            <IonBackButton defaultHref='#'></IonBackButton>
+          </IonButtons>
+          <IonTitle>Choose your job</IonTitle>
+        </IonToolbar>
       <IonContent>
       <IonGrid class='preference-container'>
         <IonRow>
@@ -49,7 +55,7 @@ export default function (): JSX.Element {
         </IonRow>
         <IonRow style={{width:"100%"}}>
           <IonCol>
-          <IonButton shape='round' expand="full">Continue</IonButton>
+          <IonButton shape='round' expand="full" routerLink='/expertise'>Continue</IonButton>
           </IonCol>
         </IonRow>
       </IonGrid>   
