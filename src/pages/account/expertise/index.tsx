@@ -27,7 +27,7 @@ export default function (): JSX.Element {
       <IonContent>
         <IonGrid className="expertise-container">
           <IonRow>
-            <IonCol style={{ textAlign: "center" }}>
+            <IonCol style={{textAlign:"center"}}>
               <IonText>
                 <h1>What is Your Expertise</h1>
               </IonText>
