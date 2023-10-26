@@ -1,5 +1,5 @@
 import { IonContent, IonPage, IonImg, IonText, IonButton, IonGrid, IonRow, IonCol } from '@ionic/react';
-import './index.css'
+import '../../complete.css'
 import imgLogo from '../../../assets/images/logo.jpeg'
 import Case from '../../../assets/images/case.webp'
 import User from '../../../assets/images/user.png'
