@@ -12,25 +12,28 @@ export default function (): JSX.Element {
         <Swiper>
           <SwiperSlide>
             <IonGrid>
-              <IonRow>
-                <IonCol>
-                  <IonImg
-                    src='https://loremflickr.com/320/500'
-                  />
-                </IonCol>
+              <IonRow style={{ "flex-grow": "1" }}>
+                <IonCol
+                  style={{
+                    'background-color': 'blue',
+                    'background': 'url(https://loremflickr.com/320/500)',
+                    "flex-grow": "1",
+                    "height": "500px",
+                  }}
+                ></IonCol>
               </IonRow>
               <IonRow>    
                 <IonCol>
-                  <IonText class='head-text'>
-                    Lorem ipsum dolor sit amet Lorem, ipsum dolor..
+                  <IonText color="primary">
+                    <h1>
+                      We are the best job portal platform
+                    </h1>
                   </IonText>
                 </IonCol>
               </IonRow>
               <IonRow>
                 <IonCol>
-                  <IonText>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
-                  </IonText>
+                  <IonText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sit sequi</IonText>
                 </IonCol>
               </IonRow>
               <IonRow>
