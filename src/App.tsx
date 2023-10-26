@@ -40,6 +40,7 @@ import Register from './pages/auth/register';
 import Login from './pages/auth/login';
 import ForgotPassword from './pages/auth/forgot-password';
 import Countries from './pages/account/countries';
+import Preference from './pages/account/preference';
 
 setupIonicReact();
 
@@ -67,6 +68,9 @@ const App: React.FC = () => (
         </Route>
         <Route path="/countries">
           <Countries />
+        </Route>
+        <Route path="/preference">
+          <Preference />
         </Route>
 
       </IonRouterOutlet>
