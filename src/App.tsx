@@ -88,6 +88,9 @@ const App: React.FC = () => (
         <Route exact path="/preference">
           <Preference />
         </Route>
+        <Route exact path="/expertise">
+          <Expertise />
+        </Route>
       </IonRouterOutlet>
       {/* <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
