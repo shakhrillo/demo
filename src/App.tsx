@@ -46,6 +46,7 @@ import Expertise from './pages/account/expertise';
 import NewPassword from './pages/auth/new-password';
 import Home from './pages/main/home';
 import Notification from './pages/main/notification';
+import User from "./pages/account/user";
 
 setupIonicReact();
 
