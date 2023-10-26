@@ -10,6 +10,10 @@ import {
   IonButton,
   IonCheckbox,
   IonCol,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
 } from "@ionic/react";
 import "./index.css";
 
@@ -24,6 +28,12 @@ const data = [
 export default function (): JSX.Element {
   return (
     <IonPage>
+      <IonToolbar>
+          <IonButtons slot="start">
+            <IonBackButton defaultHref="#"></IonBackButton>
+          </IonButtons>
+          <IonTitle>Your Expertise</IonTitle>
+        </IonToolbar>
       <IonContent>
         <IonGrid className="expertise-container">
           <IonRow>
@@ -48,7 +58,7 @@ export default function (): JSX.Element {
             </IonCol>
           </IonRow>
           <IonRow style={{ padding: "10px" }}>
-            <IonButton shape="round" style={{ width: "100%" }} expand="block">
+            <IonButton shape="round" style={{ width: "100%" }} expand="block" routerLink="tab1">
               Continue
             </IonButton>
           </IonRow>

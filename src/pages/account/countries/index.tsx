@@ -9,6 +9,10 @@ import {
   IonSearchbar,
   IonRadio,
   IonRadioGroup,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonBackButton,
 } from "@ionic/react";
 import "./index.css";
 import { useState } from "react";
@@ -27,6 +31,12 @@ export default function (): JSX.Element {
   return (
     <IonPage>
       <IonContent>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonBackButton defaultHref="#"></IonBackButton>
+          </IonButtons>
+          <IonTitle>Header Toolbar</IonTitle>
+        </IonToolbar>
         <IonGrid className="countries-container">
           <IonRow>
             <IonSearchbar
@@ -52,7 +62,7 @@ export default function (): JSX.Element {
             </IonList>
           </IonRow>
           <IonRow style={{ padding: "10px" }}>
-            <IonButton shape="round" style={{ width: "100%" }} expand="block">
+            <IonButton shape="round" style={{ width: "100%" }} expand="block" routerLink="/preference">
               Continue
             </IonButton>
           </IonRow>
