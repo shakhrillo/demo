@@ -51,65 +51,65 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      {/* <IonTabs> */}
-      <IonRouterOutlet>
-        <Route exact path="/tab1">
-          <Tab1 />
-        </Route>
-        <Route exact path="/tab1">
+      <IonTabs>
+        <IonRouterOutlet>
+          <Route exact path="/tab1">
             <Tab1 />
           </Route>
-          <Route exact path='/tab2'>
-            <Tab2 />
-          </Route>
-          <Route path='/tab3'>
-            <Tab3 />
-          </Route>
+          <Route exact path="/tab1">
+              <Tab1 />
+            </Route>
+            <Route exact path='/tab2'>
+              <Tab2 />
+            </Route>
+            <Route path='/tab3'>
+              <Tab3 />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/tab1" />
+            </Route>
+          {/* Pages */}
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Splash />
           </Route>
-        {/* Pages */}
-        <Route exact path="/">
-          <Splash />
-        </Route>
-        <Route exact path="/settings">
-          <Settings />
-        </Route>
-        <Route exact path="/welcome">
-          <Welcome />
-        </Route>
-        <Route exact path="/walkthrough">
-          <Walkthrough />
-        </Route>
-        <Route exact path="/register">
-          <Register />
-        </Route>
-        <Route exact path="/login">
-          <Login />
-        </Route>
-        <Route exact path="/forgot-password">
-          <ForgotPassword />
-        </Route>
-        <Route exact path="/countries">
-          <Countries />
-        </Route>
-        <Route exact path="/preference">
-          <Preference />
-        </Route>
-        <Route exact path="/expertise">
-          <Expertise />
-        </Route>
-        <Route exact path="/filter">
-          <Filter />
-        </Route>
-        <Route exact path="/main">
-          <Main />
-        </Route>
-        <Route exact path='/register'>
-          <Register />
-        </Route>
-      </IonRouterOutlet>
-      {/* <IonTabBar slot="bottom">
+          <Route exact path="/settings">
+            <Settings />
+          </Route>
+          <Route exact path="/welcome">
+            <Welcome />
+          </Route>
+          <Route exact path="/walkthrough">
+            <Walkthrough />
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/forgot-password">
+            <ForgotPassword />
+          </Route>
+          <Route exact path="/countries">
+            <Countries />
+          </Route>
+          <Route exact path="/preference">
+            <Preference />
+          </Route>
+          <Route exact path="/expertise">
+            <Expertise />
+          </Route>
+          <Route exact path="/filter">
+            <Filter />
+          </Route>
+          <Route exact path="/main">
+            <Main />
+          </Route>
+          <Route exact path='/register'>
+            <Register />
+          </Route>
+        </IonRouterOutlet>
+        <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon aria-hidden="true" icon={triangle} />
             <IonLabel>Tab 1</IonLabel>
@@ -122,8 +122,8 @@ const App: React.FC = () => (
             <IonIcon aria-hidden='true' icon={square} />
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
-        </IonTabBar> */}
-      {/* </IonTabs> */}
+        </IonTabBar>
+      </IonTabs>
     </IonReactRouter>
   </IonApp>
 );
