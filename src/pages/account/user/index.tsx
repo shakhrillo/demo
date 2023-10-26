@@ -1,4 +1,5 @@
 import {
+  IonButton,
   IonCard,
   IonCardContent,
   IonCardHeader,
@@ -7,6 +8,7 @@ import {
   IonCol,
   IonContent,
   IonGrid,
+  IonIcon,
   IonPage,
   IonRow,
   IonSelectOption,
@@ -14,8 +16,24 @@ import {
 } from "@ionic/react";
 import profile from "../../../assets/images/user-logo.jpeg";
 import "./index.css";
+import { createOutline, logoIonic, star } from "ionicons/icons";
 
-const data = ["Contact Information", "Summary", "Education", "Projects"];
+const data = [
+  "Contact Information",
+  "Summary",
+  "Education",
+  "Projects",
+  "Skills",
+  "Language",
+  "Certification and Licenses",
+  "Volunteering Experience",
+  "Profesional Exams",
+  "Awards & Achievements",
+  "Seminar & Trainings",
+  "Organization Activeties",
+  "Affiliations",
+  "References",
+];
 
 export default function (): JSX.Element {
   return (
@@ -52,7 +70,9 @@ export default function (): JSX.Element {
                       justifyContent: "end",
                     }}
                   >
-                    e
+                    <IonButton fill="clear" className="edit-button">
+                      <IonIcon icon={createOutline}></IonIcon>
+                    </IonButton>
                   </IonCol>
                 </IonRow>
               </IonCardContent>
