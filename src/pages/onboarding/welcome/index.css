@@ -1,0 +1,16 @@
+.background-image {
+  --background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiB8giTN9Hj8QAEz4DVdCtqWbfnrKoZSo2nA&usqp=CAU)
+    0 0/100% 100% no-repeat;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background: transparent;
+  color: #fff;
+}
+.large-text {
+  font-size: 24px;
+}
