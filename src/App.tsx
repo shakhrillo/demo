@@ -50,7 +50,8 @@ import Home from './pages/main/home';
 import WorkExperience from './pages/account/work-experience';
 import User from './pages/account/user';
 import LinkedAccount from './pages/account/linked-account';
-import JobDetails from './pages/main/job-details/index'
+import Education from './pages/account/education';
+import JobDetails from './pages/main/job-details';
 
 setupIonicReact();
 
@@ -85,6 +86,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path='/work-experience'>
             <WorkExperience />
+          </Route>
+          <Route exact path='/education'>
+            <Education />
           </Route>
           <Route exact path='/new-password'>
             <NewPassword />
