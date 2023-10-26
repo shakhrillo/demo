@@ -12,7 +12,7 @@ export default function (): JSX.Element {
         <Swiper>
           <SwiperSlide>
             <IonGrid>
-              <IonRow style={{ "flex-grow": "1" }}>
+              <IonRow>
                 <IonCol
                   style={{
                     'background-color': 'blue',
