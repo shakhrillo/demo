@@ -47,7 +47,7 @@ export default function (): JSX.Element {
             <IonCol class='login-container new-password'>
               {/* <IonImg style={{ width: '80%' }} src={logo}></IonImg> */}
               <IonText style={{ width: '100%' }} class='head-text'>
-                <h3 style={{ textAlign: 'left' }}>Create Your New Account</h3>
+                <h3 style={{ textAlign: 'left' }}>Create Your New Password</h3>
               </IonText>
               <IonInput
                 placeholder='New Password'
