@@ -16,6 +16,7 @@ import {
   IonText,
   IonToggle,
   IonTextarea,
+  IonCheckbox,
 } from '@ionic/react';
 import '../../auth/login/index.css';
 import userLogo from '../../../assets/images/user-logo.jpeg';
@@ -26,31 +27,27 @@ export default function (): JSX.Element {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Education</IonTitle>
+          <IonTitle>Organization Activities</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>
-        <IonGrid style={{ padding: 10 }}>
-          <IonRow>
-            <IonCol class='login-container settings user-settings'>
-              <IonLabel>Educational Attainment</IonLabel>
-              <IonSelect class='custom' label='Completed Masters Degree'>
-                <IonSelectOption value='full_time'>Full Time</IonSelectOption>
-                <IonSelectOption value='onsite'>Onsite</IonSelectOption>
-              </IonSelect>
-              <IonLabel>Course</IonLabel>
+        <IonGrid style={{ padding: 10, height: '100%' }}>
+          <IonRow style={{ height: '100%' }}>
+            <IonCol class='login-container settings user-settings contact-informations tesst'>
+              <IonLabel>Organization</IonLabel>
               <IonInput
-                placeholder='Computer Science'
+                placeholder='Organization'
                 type='text'
                 class='custom'
               ></IonInput>
-              <IonLabel>School</IonLabel>
+              <IonLabel>Role</IonLabel>
               <IonInput
-                placeholder='Harvard University'
+                placeholder='Role'
                 type='text'
                 class='custom'
               ></IonInput>
+
               <IonCol
                 size='auto'
                 style={{
@@ -76,32 +73,7 @@ export default function (): JSX.Element {
                 </IonCol>
               </IonCol>
 
-              <IonToggle checked={true}> Graduated</IonToggle>
-
-              <IonCol
-                size='auto'
-                style={{
-                  display: 'flex',
-                }}
-              >
-                <IonCol>
-                  <IonLabel>GPA (Optional)</IonLabel>
-                  <IonInput
-                    placeholder='Gpa'
-                    type='text'
-                    class='custom'
-                  ></IonInput>
-                </IonCol>
-
-                <IonCol>
-                  <IonLabel>Scale</IonLabel>
-                  <IonInput
-                    placeholder='Scale'
-                    type='number'
-                    class='custom'
-                  ></IonInput>
-                </IonCol>
-              </IonCol>
+              <IonCheckbox labelPlacement='end'>Still a member</IonCheckbox>
 
               <IonLabel>Description(Optional)</IonLabel>
               <IonTextarea
@@ -109,15 +81,6 @@ export default function (): JSX.Element {
                 placeholder='Description'
               ></IonTextarea>
 
-              <IonLabel>Add Media (Optional)</IonLabel>
-              <div className='file-input'>
-                <IonText>Browse File</IonText>
-                <input
-                  className='file-input'
-                  style={{ opacity: 0 }}
-                  type='file'
-                />
-              </div>
               <IonButton style={{ width: '100%' }} shape='round' expand='full'>
                 Save
               </IonButton>

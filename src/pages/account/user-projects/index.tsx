@@ -26,7 +26,7 @@ export default function (): JSX.Element {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Education</IonTitle>
+          <IonTitle>Projects</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -34,23 +34,20 @@ export default function (): JSX.Element {
         <IonGrid style={{ padding: 10 }}>
           <IonRow>
             <IonCol class='login-container settings user-settings'>
-              <IonLabel>Educational Attainment</IonLabel>
-              <IonSelect class='custom' label='Completed Masters Degree'>
-                <IonSelectOption value='full_time'>Full Time</IonSelectOption>
-                <IonSelectOption value='onsite'>Onsite</IonSelectOption>
-              </IonSelect>
-              <IonLabel>Course</IonLabel>
+              <IonLabel>Project Name</IonLabel>
               <IonInput
-                placeholder='Computer Science'
+                placeholder='Project Name'
                 type='text'
                 class='custom'
               ></IonInput>
-              <IonLabel>School</IonLabel>
+
+              <IonLabel>Role</IonLabel>
               <IonInput
-                placeholder='Harvard University'
+                placeholder='Role'
                 type='text'
                 class='custom'
               ></IonInput>
+
               <IonCol
                 size='auto'
                 style={{
@@ -76,32 +73,13 @@ export default function (): JSX.Element {
                 </IonCol>
               </IonCol>
 
-              <IonToggle checked={true}> Graduated</IonToggle>
+              <IonToggle checked={true}>Current</IonToggle>
 
-              <IonCol
-                size='auto'
-                style={{
-                  display: 'flex',
-                }}
-              >
-                <IonCol>
-                  <IonLabel>GPA (Optional)</IonLabel>
-                  <IonInput
-                    placeholder='Gpa'
-                    type='text'
-                    class='custom'
-                  ></IonInput>
-                </IonCol>
-
-                <IonCol>
-                  <IonLabel>Scale</IonLabel>
-                  <IonInput
-                    placeholder='Scale'
-                    type='number'
-                    class='custom'
-                  ></IonInput>
-                </IonCol>
-              </IonCol>
+              <IonLabel>Associated with (Optional)</IonLabel>
+              <IonSelect class='custom' label='Completed Masters Degree'>
+                <IonSelectOption value='full_time'>Full Time</IonSelectOption>
+                <IonSelectOption value='onsite'>Onsite</IonSelectOption>
+              </IonSelect>
 
               <IonLabel>Description(Optional)</IonLabel>
               <IonTextarea
@@ -109,15 +87,13 @@ export default function (): JSX.Element {
                 placeholder='Description'
               ></IonTextarea>
 
-              <IonLabel>Add Media (Optional)</IonLabel>
-              <div className='file-input'>
-                <IonText>Browse File</IonText>
-                <input
-                  className='file-input'
-                  style={{ opacity: 0 }}
-                  type='file'
-                />
-              </div>
+              <IonLabel>Project URL (Optional)</IonLabel>
+              <IonInput
+                placeholder='Project URL'
+                type='url'
+                class='custom'
+              ></IonInput>
+
               <IonButton style={{ width: '100%' }} shape='round' expand='full'>
                 Save
               </IonButton>

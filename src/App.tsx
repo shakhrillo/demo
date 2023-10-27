@@ -51,6 +51,13 @@ import WorkExperience from "./pages/account/work-experience";
 import User from "./pages/account/user";
 import LinkedAccount from "./pages/account/linked-account";
 import Education from "./pages/account/education";
+import Projects from "./pages/account/user-projects";
+import CertificationLicense from "./pages/account/certification-licenses";
+import VolunteeringExperience from "./pages/account/volunteering";
+import ProfessionalExams from "./pages/account/profesional-exams";
+import AwardsAchievements from "./pages/account/awards";
+import SeminarsTrainings from "./pages/account/seminars";
+import OrganizationActivities from "./pages/account/organization";
 import JobDetails from "./pages/main/job-details";
 import SavedJobs from "./pages/account/saved-jobs";
 import Applications from "./pages/account/applications";
@@ -93,6 +100,30 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/work-experience">
             <WorkExperience />
+          </Route>
+          <Route exact path="/education">
+            <Education />
+          </Route>
+          <Route exact path="/projects">
+            <Projects />
+          </Route>
+          <Route exact path="/volunteering-experience">
+            <VolunteeringExperience />
+          </Route>
+          <Route exact path="/certification-license">
+            <CertificationLicense />
+          </Route>
+          <Route exact path="/professional-exams">
+            <ProfessionalExams />
+          </Route>
+          <Route exact path="/awards-achievements">
+            <AwardsAchievements />
+          </Route>
+          <Route exact path="/seminars-trainings">
+            <SeminarsTrainings />
+          </Route>
+          <Route exact path="/organization-activities">
+            <OrganizationActivities />
           </Route>
           <Route exact path="/new-password">
             <NewPassword />
