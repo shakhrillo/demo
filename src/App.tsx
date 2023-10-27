@@ -66,6 +66,7 @@ import Notification from './pages/account/notification';
 import Security from './pages/account/security';
 import Status from './pages/account/status';
 import Language from './pages/account/language';
+import Message from "./pages/account/message";
 
 setupIonicReact();
 
@@ -200,6 +201,13 @@ const App: React.FC = () => (
         {/* <IonTabBar slot='bottom'>
           <IonTabButton tab='tab1' href='/tab1'>
             <IonIcon aria-hidden='true' icon={triangle} />
+          <Route exact path='/message'>
+            <Message />
+          </Route>
+        </IonRouterOutlet>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="tab1" href="/tab1">
+            <IonIcon aria-hidden="true" icon={triangle} />
             <IonLabel>Tab 1</IonLabel>
           </IonTabButton>
           <IonTabButton tab='tab2' href='/tab2'>
