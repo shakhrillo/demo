@@ -48,7 +48,7 @@ export default function(): JSX.Element {
             </IonRow>
             <IonRow style={{width:"100%"}}>
               <IonCol>
-                <IonButton shape='round' expand='full'>Continue</IonButton>
+                <IonButton shape='round' expand='full' routerLink='/new-password'>Continue</IonButton>
               </IonCol>
             </IonRow>
           </IonGrid>
