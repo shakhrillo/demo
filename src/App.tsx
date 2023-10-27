@@ -32,40 +32,45 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /* Theme variables */
-import './theme/variables.css';
-import Splash from './pages/onboarding/splash';
-import Welcome from './pages/onboarding/welcome';
-import Walkthrough from './pages/onboarding/walkthrough';
-import Register from './pages/auth/register';
-import Login from './pages/auth/login';
-import ForgotPassword from './pages/auth/forgot-password';
-import Countries from './pages/account/countries';
-import Preference from './pages/account/preference';
-import Settings from './pages/account/settings';
-import UserSettings from './pages/account/user-settings';
-import ContactInformations from './pages/account/contact-informations';
-import Expertise from './pages/account/expertise';
-import NewPassword from './pages/auth/new-password';
-import Home from './pages/main/home';
-import WorkExperience from './pages/account/work-experience';
-import User from './pages/account/user';
-import LinkedAccount from './pages/account/linked-account';
-import Education from './pages/account/education';
-import Projects from './pages/account/user-projects';
-import CertificationLicense from './pages/account/certification-licenses';
-import VolunteeringExperience from './pages/account/volunteering';
-import ProfessionalExams from './pages/account/profesional-exams';
-import AwardsAchievements from './pages/account/awards';
-import SeminarsTrainings from './pages/account/seminars';
-import OrganizationActivities from './pages/account/organization';
-import JobDetails from './pages/main/job-details';
-import SavedJobs from './pages/account/saved-jobs';
-import Applications from './pages/account/applications';
-import ApplicationSatges from './pages/account/applications/applications-stages';
-import Notification from './pages/account/notification';
-import Security from './pages/account/security';
-import Status from './pages/account/status';
-import Language from './pages/account/language';
+import "./theme/variables.css";
+import Splash from "./pages/onboarding/splash";
+import Welcome from "./pages/onboarding/welcome";
+import Walkthrough from "./pages/onboarding/walkthrough";
+import Register from "./pages/auth/register";
+import Login from "./pages/auth/login";
+import ForgotPassword from "./pages/auth/forgot-password";
+import Countries from "./pages/account/countries";
+import Preference from "./pages/account/preference";
+import Settings from "./pages/account/settings";
+import UserSettings from "./pages/account/user-settings";
+import ContactInformations from "./pages/account/contact-informations";
+import Expertise from "./pages/account/expertise";
+import NewPassword from "./pages/auth/new-password";
+import Home from "./pages/main/home";
+import WorkExperience from "./pages/account/work-experience";
+import User from "./pages/account/user";
+import LinkedAccount from "./pages/account/linked-account";
+import Education from "./pages/account/education";
+import Projects from "./pages/account/user-projects";
+import CertificationLicense from "./pages/account/certification-licenses";
+import VolunteeringExperience from "./pages/account/volunteering";
+import ProfessionalExams from "./pages/account/profesional-exams";
+import AwardsAchievements from "./pages/account/awards";
+import SeminarsTrainings from "./pages/account/seminars";
+import OrganizationActivities from "./pages/account/organization";
+import JobDetails from "./pages/main/job-details";
+import SavedJobs from "./pages/account/saved-jobs";
+import Applications from "./pages/account/applications";
+import ApplicationSatges from "./pages/account/applications/applications-stages";
+import Notification from "./pages/account/notification";
+import Security from "./pages/account/security";
+import Status from "./pages/account/status";
+import Language from "./pages/account/language";
+import Chat from "./pages/main/chat";
+import Message from "./pages/account/message";
+import ApplicationSatges1 from './pages/account/applications/aplication-stages1';
+import ApplicationSatges2 from './pages/account/applications/application-stages2';
+import ApplicationSatges3 from './pages/account/applications/application-stages3';
 
 setupIonicReact();
 
@@ -88,9 +93,7 @@ const App: React.FC = () => (
           <Route path="/register">
             <Register />
           </Route>
-
-
-          {/* <Route exact path="/tab1">
+          <Route exact path="/tab1">
             <Home />
           </Route>
           <Route exact path='/tab2'>
@@ -192,10 +195,18 @@ const App: React.FC = () => (
           <Route exact path="/application-stages">
             <ApplicationSatges />
           </Route>
+          <Route exact path="/application-stages1">
+            <ApplicationSatges1 />
+          </Route>
+          <Route exact path="/application-stages2">
+            <ApplicationSatges2 />
+          </Route>
+          <Route exact path="/application-stages3">
+            <ApplicationSatges3 />
+          </Route>
           <Route exact path="/language">
             <Language />
-            
-        </Route>*/}
+          </Route>
       </IonRouterOutlet>
         {/* <IonTabBar slot='bottom'>
           <IonTabButton tab='tab1' href='/tab1'>
