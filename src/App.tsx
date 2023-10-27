@@ -1,4 +1,4 @@
-import { Redirect, Route } from "react-router-dom";
+import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -8,89 +8,95 @@ import {
   IonTabButton,
   IonTabs,
   setupIonicReact,
-} from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
-import { ellipse, square, triangle } from "ionicons/icons";
-import Tab1 from "./pages/Tab1";
-import Tab2 from "./pages/Tab2";
-import Tab3 from "./pages/Tab3";
+} from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
+import { ellipse, square, triangle } from 'ionicons/icons';
+import Tab1 from './pages/Tab1';
+import Tab2 from './pages/Tab2';
+import Tab3 from './pages/Tab3';
 
 /* Core CSS required for Ionic components to work properly */
-import "@ionic/react/css/core.css";
+import '@ionic/react/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-import "@ionic/react/css/normalize.css";
-import "@ionic/react/css/structure.css";
-import "@ionic/react/css/typography.css";
+import '@ionic/react/css/normalize.css';
+import '@ionic/react/css/structure.css';
+import '@ionic/react/css/typography.css';
 
 /* Optional CSS utils that can be commented out */
-import "@ionic/react/css/padding.css";
-import "@ionic/react/css/float-elements.css";
-import "@ionic/react/css/text-alignment.css";
-import "@ionic/react/css/text-transformation.css";
-import "@ionic/react/css/flex-utils.css";
-import "@ionic/react/css/display.css";
+import '@ionic/react/css/padding.css';
+import '@ionic/react/css/float-elements.css';
+import '@ionic/react/css/text-alignment.css';
+import '@ionic/react/css/text-transformation.css';
+import '@ionic/react/css/flex-utils.css';
+import '@ionic/react/css/display.css';
 
 /* Theme variables */
-import "./theme/variables.css";
-import Splash from "./pages/onboarding/splash";
-import Welcome from "./pages/onboarding/welcome";
-import Walkthrough from "./pages/onboarding/walkthrough";
-import Register from "./pages/auth/register";
-import Login from "./pages/auth/login";
-import ForgotPassword from "./pages/auth/forgot-password";
-import Countries from "./pages/account/countries";
-import Preference from "./pages/account/preference";
-import Settings from "./pages/account/settings";
-import UserSettings from "./pages/account/user-settings";
-import ContactInformations from "./pages/account/contact-informations";
-import Expertise from "./pages/account/expertise";
-import NewPassword from "./pages/auth/new-password";
-import Home from "./pages/main/home";
-import WorkExperience from "./pages/account/work-experience";
-import User from "./pages/account/user";
-import LinkedAccount from "./pages/account/linked-account";
-import Education from "./pages/account/education";
-import Projects from "./pages/account/user-projects";
-import CertificationLicense from "./pages/account/certification-licenses";
-import VolunteeringExperience from "./pages/account/volunteering";
-import ProfessionalExams from "./pages/account/profesional-exams";
-import AwardsAchievements from "./pages/account/awards";
-import SeminarsTrainings from "./pages/account/seminars";
-import OrganizationActivities from "./pages/account/organization";
-import JobDetails from "./pages/main/job-details";
-import SavedJobs from "./pages/account/saved-jobs";
-import Applications from "./pages/account/applications";
-import ApplicationSatges from "./pages/account/applications/applications-stages";
-import Notification from "./pages/account/notification";
-import Security from "./pages/account/security";
-import Status from "./pages/account/status";
-import Language from "./pages/account/language";
-import FillUserProfile from "./pages/account/fillUserProfile"
-import { Tabs } from "./components/Tabs";
+import './theme/variables.css';
+import Splash from './pages/onboarding/splash';
+import Welcome from './pages/onboarding/welcome';
+import Walkthrough from './pages/onboarding/walkthrough';
+import Register from './pages/auth/register';
+import Login from './pages/auth/login';
+import ForgotPassword from './pages/auth/forgot-password';
+import Countries from './pages/account/countries';
+import Preference from './pages/account/preference';
+import Settings from './pages/account/settings';
+import UserSettings from './pages/account/user-settings';
+import ContactInformations from './pages/account/contact-informations';
+import Expertise from './pages/account/expertise';
+import NewPassword from './pages/auth/new-password';
+import Home from './pages/main/home';
+import WorkExperience from './pages/account/work-experience';
+import User from './pages/account/user';
+import LinkedAccount from './pages/account/linked-account';
+import Education from './pages/account/education';
+import Projects from './pages/account/user-projects';
+import CertificationLicense from './pages/account/certification-licenses';
+import VolunteeringExperience from './pages/account/volunteering';
+import ProfessionalExams from './pages/account/profesional-exams';
+import AwardsAchievements from './pages/account/awards';
+import SeminarsTrainings from './pages/account/seminars';
+import OrganizationActivities from './pages/account/organization';
+import JobDetails from './pages/main/job-details';
+import SavedJobs from './pages/account/saved-jobs';
+import Applications from './pages/account/applications';
+import ApplicationSatges from './pages/account/applications/applications-stages';
+import Notification from './pages/account/notification';
+import Security from './pages/account/security';
+import Status from './pages/account/status';
+import LanguagesPage from './pages/account/languages-page';
+import Skills from './pages/account/skills';
+import Affiliations from './pages/account/affiliations';
+import References from './pages/account/references';
+import CvResume from './pages/account/cv-resume';
+import ApplicationSatges1 from './pages/account/applications/aplication-stages1';
+import ApplicationSatges2 from './pages/account/applications/application-stages2';
+import ApplicationSatges3 from './pages/account/applications/application-stages3';
+import Language from './pages/account/language';
+import FillUserProfile from './pages/account/fillUserProfile';
+import { Tabs } from './components/Tabs';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-        <IonRouterOutlet>
-          <Route path={"/tabs"} component={Tabs} />
-          <Route exact path={"/"} component={Splash} />
-          <Route path={"/welcome"} component={Welcome} />
-          <Route path={"/walkthrough"} component={Walkthrough} />
-          <Route path={"/login"} component={Login} />
-          <Route path={"/register"} component={Register} />
-          <Route path={"/countries"} component={Countries} />
-          <Route path={"/preference"} component={Preference} />
-          <Route path={"/expertise"} component={Expertise} />
-          <Route path={"/fill-your-profile"} component={FillUserProfile} />
-          <Route path={"/forgot-password"} component={ForgotPassword} />
-          <Route path="/new-password" component={NewPassword} />
+      <IonRouterOutlet>
+        <Route path={'/tabs'} component={Tabs} />
+        <Route exact path={'/'} component={Splash} />
+        <Route path={'/welcome'} component={Welcome} />
+        <Route path={'/walkthrough'} component={Walkthrough} />
+        <Route path={'/login'} component={Login} />
+        <Route path={'/register'} component={Register} />
+        <Route path={'/countries'} component={Countries} />
+        <Route path={'/preference'} component={Preference} />
+        <Route path={'/expertise'} component={Expertise} />
+        <Route path={'/fill-your-profile'} component={FillUserProfile} />
+        <Route path={'/forgot-password'} component={ForgotPassword} />
+        <Route path='/new-password' component={NewPassword} />
 
-
-
-          {/* <Route exact path="/tab1">
+        {/* <Route exact path="/tab1">
             <Home />
           </Route>
           <Route exact path="/tab2">
@@ -185,7 +191,7 @@ const App: React.FC = () => (
             
         </Route>*/}
       </IonRouterOutlet>
-        {/* <IonTabBar slot="bottom">
+      {/* <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon aria-hidden="true" icon={triangle} />
             <IonLabel>Tab 1</IonLabel>

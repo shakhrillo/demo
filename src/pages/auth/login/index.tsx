@@ -19,6 +19,7 @@ import logo from '../../../assets/images/logo.jpeg';
 import facebookIcon from '../../../assets/images/facebook-icon.jpeg';
 import googleIcon from '../../../assets/images/google-icon.png';
 import appleIcon from '../../../assets/images/apple-icon.png';
+import mainLogo from '../../../assets/images/main-logo.png';
 
 import imgLogo from '../../../assets/images/logo.jpeg';
 
@@ -35,20 +36,34 @@ export default function (): JSX.Element {
         <IonGrid style={{ padding: 10 }}>
           <IonRow>
             <IonCol class='login-container'>
-              <IonImg style={{ width: '80%' }} src={logo}></IonImg>
-              <IonText class='head-text'>
-                <h1>Create New Account</h1>
+              <IonImg style={{ width: '40%' }} src={mainLogo}></IonImg>
+
+              <IonText>
+                <h1 style={{ fontSize: '28px', fontWeight: 'bold' }}>
+                  Create New Account
+                </h1>
               </IonText>
-              <IonInput
-                placeholder='Username'
-                type='text'
-                class='custom'
-              ></IonInput>
-              <IonInput
-                placeholder='Password'
-                type='password'
-                class='custom'
-              ></IonInput>
+
+              <IonRow
+                style={{
+                  width: '100%',
+                }}
+              >
+                <IonCol>
+                  <IonInput
+                    placeholder='Email'
+                    type='email'
+                    class='custom'
+                  ></IonInput>
+                  <IonInput
+                    placeholder='Password'
+                    type='password'
+                    class='custom'
+                    style={{ marginTop: 15 }}
+                  ></IonInput>
+                </IonCol>
+              </IonRow>
+
               <IonCheckbox labelPlacement='end'>Remember me</IonCheckbox>
               <IonButton style={{ width: '100%' }} shape='round' expand='full'>
                 Sign up
@@ -83,7 +98,7 @@ export default function (): JSX.Element {
                 </IonButton>
               </IonItem>
               <IonText>
-                Already have an account? <a href='/register' >Sign in</a>
+                Already have an account? <a href='/register'>Sign in</a>
               </IonText>
             </IonCol>
           </IonRow>
