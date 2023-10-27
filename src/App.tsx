@@ -32,32 +32,33 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import './theme/variables.css';
-import Splash from './pages/onboarding/splash';
-import Welcome from './pages/onboarding/welcome';
-import Walkthrough from './pages/onboarding/walkthrough';
-import Register from './pages/auth/register';
-import Login from './pages/auth/login';
-import ForgotPassword from './pages/auth/forgot-password';
-import Countries from './pages/account/countries';
-import Preference from './pages/account/preference';
-import Settings from './pages/account/settings';
-import UserSettings from './pages/account/user-settings';
-import ContactInformations from './pages/account/contact-informations';
-import Expertise from './pages/account/expertise';
-import NewPassword from './pages/auth/new-password';
-import Home from './pages/main/home';
-import WorkExperience from './pages/account/work-experience';
-import User from './pages/account/user';
-import LinkedAccount from './pages/account/linked-account';
-import Education from './pages/account/education';
-import JobDetails from './pages/main/job-details';
-import SavedJobs from './pages/account/saved-jobs';
-import Applications from './pages/account/applications';
-import ApplicationSatges from './pages/account/applications/applications-stages';
+import "./theme/variables.css";
+import Splash from "./pages/onboarding/splash";
+import Welcome from "./pages/onboarding/welcome";
+import Walkthrough from "./pages/onboarding/walkthrough";
+import Register from "./pages/auth/register";
+import Login from "./pages/auth/login";
+import ForgotPassword from "./pages/auth/forgot-password";
+import Countries from "./pages/account/countries";
+import Preference from "./pages/account/preference";
+import Settings from "./pages/account/settings";
+import UserSettings from "./pages/account/user-settings";
+import ContactInformations from "./pages/account/contact-informations";
+import Expertise from "./pages/account/expertise";
+import NewPassword from "./pages/auth/new-password";
+import Home from "./pages/main/home";
+import WorkExperience from "./pages/account/work-experience";
+import User from "./pages/account/user";
+import LinkedAccount from "./pages/account/linked-account";
+import Education from "./pages/account/education";
+import JobDetails from "./pages/main/job-details";
+import SavedJobs from "./pages/account/saved-jobs";
+import Applications from "./pages/account/applications";
+import ApplicationSatges from "./pages/account/applications/applications-stages";
 import Notification from "./pages/account/notification";
 import Security from "./pages/account/security";
 import Status from "./pages/account/status";
+import Language from "./pages/account/language";
 
 setupIonicReact();
 
@@ -135,14 +136,17 @@ const App: React.FC = () => (
           <Route exact path="/status">
             <Status />
           </Route>
-          <Route exact path='/saved-jobs'>
+          <Route exact path="/saved-jobs">
             <SavedJobs />
           </Route>
-          <Route exact path='/applications'>
+          <Route exact path="/applications">
             <Applications />
           </Route>
-          <Route exact path='/application-stages'>
+          <Route exact path="/application-stages">
             <ApplicationSatges />
+          </Route>
+          <Route exact path="/language">
+            <Language />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
