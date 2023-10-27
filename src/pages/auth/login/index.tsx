@@ -13,6 +13,7 @@ import {
   IonGrid,
   IonRow,
   IonImg,
+  IonRouterLink,
 } from '@ionic/react';
 import './index.css';
 import logo from '../../../assets/images/logo.jpeg';
@@ -83,7 +84,7 @@ export default function (): JSX.Element {
                 </IonButton>
               </IonItem>
               <IonText>
-                Already have an account? <a href='/register' >Sign in</a>
+                Already have an account? <IonRouterLink routerLink='/register'>Sign in</IonRouterLink>
               </IonText>
             </IonCol>
           </IonRow>

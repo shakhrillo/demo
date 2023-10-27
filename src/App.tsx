@@ -3,6 +3,7 @@ import {
   IonApp,
   IonIcon,
   IonLabel,
+  IonPage,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
@@ -10,7 +11,7 @@ import {
   setupIonicReact,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { bookmark, ellipse, home, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -66,6 +67,8 @@ import Notification from './pages/account/notification';
 import Security from './pages/account/security';
 import Status from './pages/account/status';
 import Language from './pages/account/language';
+import FillUserProfile from './pages/account/fillUserProfile';
+import { Tabs } from './components/Tabs';
 
 setupIonicReact();
 
@@ -73,26 +76,27 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
         <IonRouterOutlet>
-          <Route exact path="/">
-            <Splash />
+          <Route path={"/tabs"} render={() => <Tabs />} />
+          <Route exact path={"/"}>
+            <Redirect to={"/tabs"} />
           </Route>
-          <Route path="/welcome">
-            <Welcome />
-          </Route>
-          <Route path="/walkthrough">
-            <Walkthrough />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-
-
-          {/* <Route exact path="/tab1">
-            <Home />
-          </Route>
+          <Route exact path={"/"} component={Splash} />
+          <Route path={"/welcome"} component={Welcome} />
+          <Route path={"/walkthrough"} component={Walkthrough} />
+          <Route path={"/login"} component={Login} />
+          <Route path={"/register"} component={Register} />
+          <Route path={"/countries"} component={Countries} />
+          <Route path={"/preference"} component={Preference} />
+          <Route path={"/expertise"} component={Expertise} />
+          <Route path={"/fill-user-profile"} component={FillUserProfile} />
+          <Route path={"/forgot-password"} component={ForgotPassword} />
+          <Route path={"/new-password"} component={NewPassword} />
+      </IonRouterOutlet>
+    </IonReactRouter>
+  </IonApp>
+);
+export default App
+          /*
           <Route exact path='/tab2'>
             <Tab2 />
           </Route>
@@ -141,9 +145,6 @@ const App: React.FC = () => (
           <Route exact path='/organization-activities'>
             <OrganizationActivities />
           </Route>
-          <Route exact path='/new-password'>
-            <NewPassword />
-          </Route>
           <Route exact path='/welcome'>
             <Welcome />
           </Route>
@@ -155,18 +156,6 @@ const App: React.FC = () => (
           </Route>
           <Route exact path='/login'>
             <Login />
-          </Route>
-          <Route exact path='/forgot-password'>
-            <ForgotPassword />
-          </Route>
-          <Route exact path='/countries'>
-            <Countries />
-          </Route>
-          <Route exact path='/preference'>
-            <Preference />
-          </Route>
-          <Route exact path='/expertise'>
-            <Expertise />
           </Route>
           <Route exact path='/user'>
             <User />
@@ -195,9 +184,8 @@ const App: React.FC = () => (
           <Route exact path="/language">
             <Language />
             
-        </Route>*/}
-      </IonRouterOutlet>
-        {/* <IonTabBar slot='bottom'>
+        </Route>*/
+        /* <IonTabBar slot='bottom'>
           <IonTabButton tab='tab1' href='/tab1'>
             <IonIcon aria-hidden='true' icon={triangle} />
             <IonLabel>Tab 1</IonLabel>
@@ -211,9 +199,4 @@ const App: React.FC = () => (
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
         </IonTabBar>
-      </IonTabs> */}
-    </IonReactRouter>
-  </IonApp>
-);
-
-export default App;
+      </IonTabs> */

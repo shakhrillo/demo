@@ -60,7 +60,7 @@ export default function (): JSX.Element {
                 class='custom'
               ></IonInput>
               <IonCheckbox labelPlacement='end'>Remember me</IonCheckbox>
-              <IonButton style={{ width: '100%' }} shape='round' expand='full'>
+              <IonButton style={{ width: '100%' }} shape='round' expand='full' routerLink={"/tabs"}>
                 Continue
               </IonButton>
             </IonCol>

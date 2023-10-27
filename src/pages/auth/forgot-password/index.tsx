@@ -1,16 +1,16 @@
-import { IonContent, IonPage, IonGrid, IonRow, IonCol, IonText, IonButton } from '@ionic/react';
-import '../../complete.css'
-import Women from '../../../assets/images/empleyeWomen.png'
-import Message from '../../../assets/images/message.webp'
+import { IonContent, IonPage, IonGrid, IonRow, IonCol, IonText, IonButton } from "@ionic/react";
+import "../../complete.css"
+import Women from "../../../assets/images/empleyeWomen.png"
+import Message from "../../../assets/images/message.webp"
 
 export default function(): JSX.Element {
   return (
     <IonPage>
       <IonContent>
-          <IonGrid class='forgotPassword-container'>
+          <IonGrid class={"forgotPassword-container"}>
             <IonRow>
               <IonCol>
-                <img src={Women} alt="img women"/>
+                <img src={Women} alt={"img women"}/>
               </IonCol>
             </IonRow>
             <IonRow>
@@ -21,9 +21,9 @@ export default function(): JSX.Element {
               </IonCol>
             </IonRow>
             <IonRow style={{width:"100%"}}>
-            <IonCol class='select-horizon'>
-                <img style={{width:"100px"}} src={Message} alt="" />
-                <IonCol class='texts'>
+            <IonCol class={"select-horizon"}>
+                <img style={{width:"100px"}} src={Message} alt={""} />
+                <IonCol class="texts">
                   <IonText color="medium">
                     via sms
                   </IonText>
@@ -34,10 +34,10 @@ export default function(): JSX.Element {
               </IonCol>
             </IonRow>
             <IonRow style={{width:"100%"}}>
-            <IonCol class='select-horizon'>
+            <IonCol class={"select-horizon"}>
                 <img style={{width:"100px"}} src={Message} alt="" />
-                <IonCol class='texts'>
-                  <IonText color="medium">
+                <IonCol class={"texts"}>
+                  <IonText color={"medium"}>
                     via email
                   </IonText>
                   <IonText>
@@ -48,7 +48,7 @@ export default function(): JSX.Element {
             </IonRow>
             <IonRow style={{width:"100%"}}>
               <IonCol>
-                <IonButton shape='round' expand='full'>Continue</IonButton>
+                <IonButton shape={"round"} expand={"full"} routerLink={"/new-password"}>Continue</IonButton>
               </IonCol>
             </IonRow>
           </IonGrid>

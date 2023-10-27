@@ -11,7 +11,7 @@ export default function(): JSX.Element {
   useEffect(() => {
     setTimeout(() => {
       history.push('welcome')
-    }, 5000);
+    }, 1000);
   }, []);
 
   return (

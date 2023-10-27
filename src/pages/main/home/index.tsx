@@ -1,7 +1,8 @@
-import { IonContent, IonPage, IonGrid, IonRow, IonCol, IonText, IonIcon, IonButton,IonList, IonItem, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle } from '@ionic/react';
+import { IonContent, IonPage, IonGrid, IonRow, IonCol, IonText, IonIcon, IonButton,IonList, IonItem, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle, IonTabBar, IonTabButton, IonTabs, IonRouterOutlet } from '@ionic/react';
 import './index.css'
 import Google from '../../../assets/images/google.png'
-import { save } from 'ionicons/icons';
+import { call, home, person, save } from 'ionicons/icons';
+import settings from '../../account/settings';
 
 export default function(): JSX.Element {
     return (

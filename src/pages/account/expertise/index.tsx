@@ -58,7 +58,7 @@ export default function (): JSX.Element {
             </IonCol>
           </IonRow>
           <IonRow style={{ padding: "10px" }}>
-            <IonButton shape="round" style={{ width: "100%" }} expand="block" routerLink="tab1">
+            <IonButton shape="round" style={{ width: "100%" }} expand="block" routerLink="fill-user-profile">
               Continue
             </IonButton>
           </IonRow>

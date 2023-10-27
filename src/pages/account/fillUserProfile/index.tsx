@@ -88,6 +88,7 @@ export default function (): JSX.Element {
                 style={{ width: '100%' }}
                 shape='round'
                 expand='full'
+                routerLink='/forgot-password'
               >
                 Continue
               </IonButton>
