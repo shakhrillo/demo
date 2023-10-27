@@ -51,6 +51,7 @@ import WorkExperience from "./pages/account/work-experience";
 import User from "./pages/account/user";
 import LinkedAccount from "./pages/account/linked-account";
 import Notification from "./pages/account/notification";
+import Security from "./pages/account/security";
 
 setupIonicReact();
 
@@ -121,6 +122,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/notification">
             <Notification />
+          </Route>
+          <Route exact path="/security">
+            <Security />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
