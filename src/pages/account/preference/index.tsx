@@ -1,10 +1,24 @@
 import { IonContent, IonPage, IonImg, IonText, IonButton, IonGrid, IonRow, IonCol, IonToolbar, IonButtons, IonBackButton, IonTitle } from '@ionic/react';
 import '../../complete.css'
-import imgLogo from '../../../assets/images/logo.jpeg'
 import Case from '../../../assets/images/case.webp'
 import User from '../../../assets/images/user.png'
+import { useState } from 'react';
+import { Style } from '@capacitor/status-bar';
+import LogoJobee from '../../../assets/images/LogoJobee.png'
 
 export default function (): JSX.Element {
+  const [firstSelect, setFirstSelect] = useState(false)
+  const [secondSelect, setSecondSelect] = useState(false)
+
+  function first_Active(){
+    setFirstSelect(true),
+    setSecondSelect(false)
+  }
+  function second_Active(){
+    setFirstSelect(false),
+    setSecondSelect(true)
+  }
+
   return (
     <IonPage>
       <IonToolbar>
@@ -18,8 +32,8 @@ export default function (): JSX.Element {
         <IonRow>
           <IonCol>
             <img
-             src={imgLogo}
-             style={{ width: 200 }}
+             src={LogoJobee}
+             style={{ width: "120px" }}
              alt="" />
           </IonCol>
         </IonRow>
@@ -34,7 +48,10 @@ export default function (): JSX.Element {
           </IonCol>
         </IonRow>
         <IonRow class='selects'>
-          <IonCol class='select'>
+          <IonCol
+            onClick={first_Active}
+            style={{border:`1px solid ${firstSelect? 'blue' : 'white'}`}}
+            class='select'>
             <img className='img-case' src={Case} alt="" />
             <IonText style={{height:"30%"}}>
               <h4>Find a Job</h4>
@@ -43,7 +60,10 @@ export default function (): JSX.Element {
               <p>I want to find a job for me</p>
             </IonText>
           </IonCol>
-          <IonCol class='select'>
+          <IonCol class='select'
+            onClick={second_Active}
+            style={{border:`1px solid ${secondSelect? 'blue' : 'white'}`}}
+          >
             <img className='img-case' src={User} alt="" />
             <IonText style={{height:"30%"}}>
               <h4>Find an Employee</h4>
