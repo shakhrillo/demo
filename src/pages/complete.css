@@ -36,8 +36,9 @@
 }
 .img-case{
     width: 60%;
-    height: 30%;
+    height: 40%;
     object-fit: contain;
+    background-color: rgb(159, 199, 231);
     border-radius: 50%;
 }
 .select-horizon{

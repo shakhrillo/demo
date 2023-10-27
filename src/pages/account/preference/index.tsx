@@ -50,7 +50,7 @@ export default function (): JSX.Element {
         <IonRow class='selects'>
           <IonCol
             onClick={first_Active}
-            style={{border:`1px solid ${firstSelect? 'blue' : 'white'}`}}
+            style={{border:`${firstSelect? '2px solid blue' : '1px solid grey'}`}}
             class='select'>
             <img className='img-case' src={Case} alt="" />
             <IonText style={{height:"30%"}}>
@@ -62,7 +62,7 @@ export default function (): JSX.Element {
           </IonCol>
           <IonCol class='select'
             onClick={second_Active}
-            style={{border:`1px solid ${secondSelect? 'blue' : 'white'}`}}
+            style={{border:`${secondSelect? '2px solid blue' : '1px solid grey'}`}}
           >
             <img className='img-case' src={User} alt="" />
             <IonText style={{height:"30%"}}>
