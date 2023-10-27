@@ -179,7 +179,7 @@ const App: React.FC = () => (
         <Route exact path="/language">
           <Language />
         </Route>
-        <Route exact path="/language">
+        <Route exact path="/chat">
           <Chat />
         </Route>
       </IonRouterOutlet>
