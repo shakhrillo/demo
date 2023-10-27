@@ -44,7 +44,7 @@ export default function (): JSX.Element {
               onIonInput={(ev) => handleInput(ev)}
             ></IonSearchbar>
           </IonRow>
-          <IonRow style={{ overflowY: "auto" }}>
+          <IonRow style={{ overflowY: "auto",height: "100%" }}>
             <IonList lines="none" style={{ width: "100%" }}>
               <IonRadioGroup>
                 {results.map((result, i) => (
@@ -62,7 +62,12 @@ export default function (): JSX.Element {
             </IonList>
           </IonRow>
           <IonRow style={{ padding: "10px" }}>
-            <IonButton shape="round" style={{ width: "100%" }} expand="block" routerLink="/preference">
+            <IonButton
+              shape="round"
+              style={{ width: "100%" }}
+              expand="block"
+              routerLink="/preference"
+            >
               Continue
             </IonButton>
           </IonRow>
