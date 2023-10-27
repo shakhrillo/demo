@@ -72,9 +72,25 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
         <IonRouterOutlet>
-          <Route exact path='/tab1'>
+          <Route exact path="/">
+            <Splash />
+          </Route>
+          <Route path="/welcome">
+            <Welcome />
+          </Route>
+          <Route path="/walkthrough">
+            <Walkthrough />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+
+
+          {/* <Route exact path="/tab1">
             <Home />
           </Route>
           <Route exact path='/tab2'>
@@ -179,9 +195,9 @@ const App: React.FC = () => (
           <Route exact path="/language">
             <Language />
             
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot='bottom'>
+        </Route>*/}
+      </IonRouterOutlet>
+        {/* <IonTabBar slot='bottom'>
           <IonTabButton tab='tab1' href='/tab1'>
             <IonIcon aria-hidden='true' icon={triangle} />
             <IonLabel>Tab 1</IonLabel>
@@ -195,7 +211,7 @@ const App: React.FC = () => (
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
         </IonTabBar>
-      </IonTabs>
+      </IonTabs> */}
     </IonReactRouter>
   </IonApp>
 );
