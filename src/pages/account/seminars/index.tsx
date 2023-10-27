@@ -26,31 +26,27 @@ export default function (): JSX.Element {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Education</IonTitle>
+          <IonTitle>Seminars & Trainings</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>
-        <IonGrid style={{ padding: 10 }}>
-          <IonRow>
-            <IonCol class='login-container settings user-settings'>
-              <IonLabel>Educational Attainment</IonLabel>
-              <IonSelect class='custom' label='Completed Masters Degree'>
-                <IonSelectOption value='full_time'>Full Time</IonSelectOption>
-                <IonSelectOption value='onsite'>Onsite</IonSelectOption>
-              </IonSelect>
-              <IonLabel>Course</IonLabel>
+        <IonGrid style={{ padding: 10, height: '100%' }}>
+          <IonRow style={{ height: '100%' }}>
+            <IonCol class='login-container settings user-settings contact-informations tesst'>
+              <IonLabel>Title</IonLabel>
               <IonInput
-                placeholder='Computer Science'
+                placeholder='Title'
                 type='text'
                 class='custom'
               ></IonInput>
-              <IonLabel>School</IonLabel>
+              <IonLabel>Organizer</IonLabel>
               <IonInput
-                placeholder='Harvard University'
+                placeholder='Organizer'
                 type='text'
                 class='custom'
               ></IonInput>
+
               <IonCol
                 size='auto'
                 style={{
@@ -69,6 +65,7 @@ export default function (): JSX.Element {
                 <IonCol>
                   <IonLabel>To</IonLabel>
                   <IonInput
+                    disabled
                     placeholder='To'
                     type='date'
                     class='custom'
@@ -76,32 +73,7 @@ export default function (): JSX.Element {
                 </IonCol>
               </IonCol>
 
-              <IonToggle checked={true}> Graduated</IonToggle>
-
-              <IonCol
-                size='auto'
-                style={{
-                  display: 'flex',
-                }}
-              >
-                <IonCol>
-                  <IonLabel>GPA (Optional)</IonLabel>
-                  <IonInput
-                    placeholder='Gpa'
-                    type='text'
-                    class='custom'
-                  ></IonInput>
-                </IonCol>
-
-                <IonCol>
-                  <IonLabel>Scale</IonLabel>
-                  <IonInput
-                    placeholder='Scale'
-                    type='number'
-                    class='custom'
-                  ></IonInput>
-                </IonCol>
-              </IonCol>
+              <IonToggle checked={true}>Current</IonToggle>
 
               <IonLabel>Description(Optional)</IonLabel>
               <IonTextarea
@@ -109,15 +81,6 @@ export default function (): JSX.Element {
                 placeholder='Description'
               ></IonTextarea>
 
-              <IonLabel>Add Media (Optional)</IonLabel>
-              <div className='file-input'>
-                <IonText>Browse File</IonText>
-                <input
-                  className='file-input'
-                  style={{ opacity: 0 }}
-                  type='file'
-                />
-              </div>
               <IonButton style={{ width: '100%' }} shape='round' expand='full'>
                 Save
               </IonButton>
