@@ -4,10 +4,8 @@ import {
   IonText,
   IonRow,
   IonCol,
-  IonButton,
   IonContent,
 } from "@ionic/react";
-import { useEffect } from "react";
 import { useHistory } from "react-router";
 import "./index.css";
 
