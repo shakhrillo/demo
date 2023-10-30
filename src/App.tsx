@@ -1,6 +1,4 @@
-import { Route } from 'react-router-dom';
-import { IonApp, IonNav, IonNavLink, IonRouterOutlet, setupIonicReact } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import { IonNav, setupIonicReact } from '@ionic/react';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -20,30 +18,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import { Walkthrough } from './views/walkthrough';
-import { Launch } from './views/launch';
-import { Signin } from './views/sign-in';
-import { Verification } from './views/verification';
-import { Home } from './views/home';
-import { Signup } from './views/sign-up';
 import Main from './views/main';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonNav root={() => <Main />}></IonNav>
-
 );
-  // <IonApp className='pro-unity'>
-  //   <IonReactRouter>
-  //     <IonRouterOutlet>
-  //       <Route exact path={'/'} component={Home} />
-  //       <Route exact path={'/launch'} component={Launch} />
-  //       <Route exact path={'/sign-in'} component={Signin} />
-  //       <Route exact path={'/sign-up'} component={Signup} />
-  //       <Route exact path={'/verification'} component={Verification} />
-  //     </IonRouterOutlet>
-  //   </IonReactRouter>
-  // </IonApp>
 
 export default App;
