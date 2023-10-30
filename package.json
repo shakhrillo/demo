@@ -10,7 +10,8 @@
     "test.e2e": "cypress run",
     "test.unit": "vitest",
     "lint": "eslint",
-    "ios": "ionic capacitor run ios -l --external"
+    "ios": "ionic capacitor run ios -l --external",
+    "android": "npx cap run android --target=Pixel_4_API_34 --external"
   },
   "dependencies": {
     "@capacitor/android": "5.5.0",
