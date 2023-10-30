@@ -21,8 +21,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import { Walkthrough } from './views/walkthrough';
-import { Signin } from './views/sign-in';
-import { Verification } from './views/verification';
+import { Launch } from './views/launch';
 
 setupIonicReact();
 
@@ -31,6 +30,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path={'/'} component={Walkthrough} />
+        <Route exact path={'/launch'} component={Launch} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
