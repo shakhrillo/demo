@@ -1,11 +1,14 @@
-import React from 'react';
-import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonRouterOutlet } from '@ionic/react';
+import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 import { Route, Redirect } from 'react-router';
 
-import { playCircle, radio, library, search } from 'ionicons/icons';
+import { homeOutline, medicalOutline, bookOutline, searchOutline, basketOutline, shieldOutline } from 'ionicons/icons';
 import { Home } from '../home';
+import { Shop } from '../shop';
+import { Subscription } from '../subscription';
+import { Blog } from '../blog';
+import { Explore } from '../explore';
 
 function Main() {
   return (
@@ -13,36 +16,32 @@ function Main() {
       <IonTabs>
         <IonRouterOutlet>
           <Redirect exact path="/" to="/home" />
-          {/*
-          Use the render method to reduce the number of renders your component will have due to a route change.
-
-          Use the component prop when your component depends on the RouterComponentProps passed in automatically.
-        */}
           <Route path="/home" render={() => <Home />} exact={true} />
-          {/* <Route path="/radio" render={() => <RadioPage />} exact={true} />
-          <Route path="/library" render={() => <LibraryPage />} exact={true} />
-          <Route path="/search" render={() => <SearchPage />} exact={true} /> */}
+          <Route path="/explore" render={() => <Explore />} exact={true} />
+          <Route path="/blog" render={() => <Blog />} exact={true} />
+          <Route path="/subscription" render={() => <Subscription />} exact={true} />
+          <Route path="/shop" render={() => <Shop />} exact={true} />
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">
-            <IonIcon icon={playCircle} />
-            <IonLabel>Listen now</IonLabel>
+            <IonIcon icon={homeOutline} />
           </IonTabButton>
 
-          <IonTabButton tab="radio" href="/radio">
-            <IonIcon icon={radio} />
-            <IonLabel>Radio</IonLabel>
+          <IonTabButton tab="explore" href="/explore">
+            <IonIcon icon={medicalOutline} />
           </IonTabButton>
 
-          <IonTabButton tab="library" href="/library">
-            <IonIcon icon={library} />
-            <IonLabel>Library</IonLabel>
+          <IonTabButton tab="blog" href="/blog">
+            <IonIcon icon={bookOutline} />
           </IonTabButton>
 
-          <IonTabButton tab="search" href="/search">
-            <IonIcon icon={search} />
-            <IonLabel>Search</IonLabel>
+          <IonTabButton tab="subscription" href="/subscription">
+            <IonIcon icon={shieldOutline} />
+          </IonTabButton>
+
+          <IonTabButton tab="shop" href="/shop">
+            <IonIcon icon={basketOutline} />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
