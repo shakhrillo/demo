@@ -2,6 +2,7 @@ import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardS
 import { mailOutline, personOutline } from "ionicons/icons";
 import React from "react";
 import { Signin } from "../sign-in";
+import { PuCard } from "../../components/card";
 
 export const Home: React.FC = () => {
   const ionRouter = useIonRouter();  
@@ -28,15 +29,16 @@ export const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Consult with specialists, Prevent you from diseases!</IonCardTitle>
-          </IonCardHeader>
-
-          <IonCardContent>
-            Get special 10% discount this December
-          </IonCardContent>
-        </IonCard>
+        <PuCard 
+          title="Consult with specialists, Prevent you from diseases!" 
+          content="Get special 10% discount this December"
+          style={{ 
+            height: '150px',
+            paddingRight: '20%',
+            color: 'white',
+            backgroundImage: 'url(https://plus.unsplash.com/premium_photo-1682096894520-d7f7794c3981?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEzfHxkb2N0b3J8ZW58MHx8MHx8fDA%3D)',
+          }}
+        />
         <IonGrid>
           <IonRow className="ion-align-items-center">
             <IonCol>
