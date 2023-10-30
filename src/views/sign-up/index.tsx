@@ -1,6 +1,7 @@
-import { IonBackButton, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonSelect, IonSelectOption, IonText, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
+import { IonBackButton, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonNavLink, IonPage, IonRow, IonSelect, IonSelectOption, IonText, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
 import { logoApple, logoFacebook, logoGoogle } from "ionicons/icons";
 import React from "react";
+import { Signin } from "../sign-in";
 
 export const Signup: React.FC = () => {
   const ionRouter = useIonRouter();
@@ -10,7 +11,7 @@ export const Signup: React.FC = () => {
       <IonHeader className="ion-no-border">
         <IonToolbar color="transparent">
           <IonButtons slot="start">
-            <IonBackButton></IonBackButton>
+            <IonBackButton defaultHref="" color="primary"></IonBackButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
@@ -91,7 +92,11 @@ export const Signup: React.FC = () => {
             <IonCol>
               <IonText>
                 Already have an account? 
-                <IonButton size="small" onClick={() => ionRouter.push('sign-in', 'back')}>Sign in</IonButton>
+                {/* <IonBackButton text={'Sign in'}></IonBackButton> */}
+                <IonNavLink routerDirection="back" component={() => <Signin />}>
+                  <IonButton size="small">Sign in</IonButton>
+                </IonNavLink>
+                {/* <IonButton size="small" onClick={() => ionRouter.goBack()}>Sign in</IonButton> */}
               </IonText>
             </IonCol>
           </IonRow>

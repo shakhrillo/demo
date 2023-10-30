@@ -1,6 +1,8 @@
-import { IonBackButton, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonSelect, IonSelectOption, IonText, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
+import { IonBackButton, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonNavLink, IonPage, IonRow, IonSelect, IonSelectOption, IonText, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
 import { logoApple, logoFacebook, logoGoogle } from "ionicons/icons";
 import React from "react";
+import { Signup } from "../sign-up";
+import { Verification } from "../verification";
 
 export const Signin: React.FC = () => {
   const ionRouter = useIonRouter();
@@ -8,9 +10,9 @@ export const Signin: React.FC = () => {
   return (
     <IonPage>
       <IonHeader className="ion-no-border">
-        <IonToolbar color="transparent">
+        <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton></IonBackButton>
+            <IonBackButton defaultHref="/"></IonBackButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
@@ -54,7 +56,9 @@ export const Signin: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-              <IonButton expand="block">Continue</IonButton>
+              <IonNavLink routerDirection="forward" component={() => <Verification />}>
+                <IonButton expand="block">Continue</IonButton>
+              </IonNavLink>
             </IonCol>
           </IonRow>
         </IonGrid>
@@ -82,7 +86,9 @@ export const Signin: React.FC = () => {
               </IonText>
             </IonCol>
             <IonCol>
-              <IonButton size="small" onClick={() => ionRouter.push('sign-up', 'forward')}>Sign up</IonButton>
+              <IonNavLink routerDirection="forward" component={() => <Signup />}>
+                <IonButton size="small">Sign up</IonButton>
+              </IonNavLink>
             </IonCol>
           </IonRow>
         </IonGrid>

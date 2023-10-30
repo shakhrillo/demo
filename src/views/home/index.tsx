@@ -1,6 +1,7 @@
-import { IonBackButton, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonPage, IonRow, IonText, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
+import { IonBackButton, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonNavLink, IonPage, IonRow, IonText, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
 import { mailOutline, personOutline } from "ionicons/icons";
 import React from "react";
+import { Signin } from "../sign-in";
 
 export const Home: React.FC = () => {
   const ionRouter = useIonRouter();  
@@ -13,12 +14,16 @@ export const Home: React.FC = () => {
             Healthpedia
           </IonTitle>
           <IonButtons slot="end">
-            <IonButton onClick={() => ionRouter.push('sign-in', 'forward')}>
-              <IonIcon icon={mailOutline}></IonIcon>
-            </IonButton>
-            <IonButton onClick={() => ionRouter.push('sign-in', 'forward')}>
-              <IonIcon icon={personOutline}></IonIcon>
-            </IonButton>
+            <IonNavLink routerDirection="forward" component={() => <Signin />}>
+              <IonButton>
+                <IonIcon icon={mailOutline}></IonIcon>
+              </IonButton>
+            </IonNavLink>
+            <IonNavLink routerDirection="forward" component={() => <Signin />}>
+              <IonButton>
+                <IonIcon icon={personOutline}></IonIcon>
+              </IonButton>
+            </IonNavLink>
           </IonButtons>
         </IonToolbar>
       </IonHeader>

@@ -1,11 +1,13 @@
-import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonSelect, IonSelectOption, IonText, IonTitle, IonToolbar } from "@ionic/react";
-import { logoApple, logoFacebook, logoGoogle } from "ionicons/icons";
+import { IonBackButton, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonSelect, IonSelectOption, IonText, IonTitle, IonToolbar } from "@ionic/react";
 import React from "react";
 
 export const Verification: React.FC = () => (
   <IonPage>
     <IonHeader className="ion-no-border">
       <IonToolbar color="transparent">
+        <IonButtons slot="start">
+          <IonBackButton defaultHref="" color="primary"></IonBackButton>
+        </IonButtons>
         <IonButton slot="end" disabled>Resend Code</IonButton>
       </IonToolbar>
     </IonHeader>

@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonNav, IonNavLink, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -26,21 +26,24 @@ import { Signin } from './views/sign-in';
 import { Verification } from './views/verification';
 import { Home } from './views/home';
 import { Signup } from './views/sign-up';
+import Main from './views/main';
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp className='pro-unity'>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path={'/'} component={Home} />
-        <Route exact path={'/launch'} component={Launch} />
-        <Route exact path={'/sign-in'} component={Signin} />
-        <Route exact path={'/sign-up'} component={Signup} />
-        <Route exact path={'/verification'} component={Verification} />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <IonNav root={() => <Main />}></IonNav>
+
 );
+  // <IonApp className='pro-unity'>
+  //   <IonReactRouter>
+  //     <IonRouterOutlet>
+  //       <Route exact path={'/'} component={Home} />
+  //       <Route exact path={'/launch'} component={Launch} />
+  //       <Route exact path={'/sign-in'} component={Signin} />
+  //       <Route exact path={'/sign-up'} component={Signup} />
+  //       <Route exact path={'/verification'} component={Verification} />
+  //     </IonRouterOutlet>
+  //   </IonReactRouter>
+  // </IonApp>
 
 export default App;
