@@ -30,7 +30,7 @@ const App: React.FC = () => (
   <IonApp className='pro-unity'>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path={'/'} component={Verification} />
+        <Route exact path={'/'} component={Walkthrough} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
