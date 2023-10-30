@@ -9,8 +9,8 @@ export const Verification: React.FC = () => (
         <IonButton slot="end" disabled>Resend Code</IonButton>
       </IonToolbar>
     </IonHeader>
-    <IonContent class="ion-padding">
-      <IonGrid>
+    <IonContent>
+      <IonGrid class="ion-padding pu-full-height pu-flex-column">
         <IonRow>
           <IonCol>
             <IonText>
@@ -25,56 +25,28 @@ export const Verification: React.FC = () => (
             </IonText>
           </IonCol>
         </IonRow>
-      </IonGrid>
-      <IonList>
-        <IonItem>
-          <IonGrid>
-            <IonRow class="ion-align-items-center">
-              <IonCol size="auto">
-                <img width={24} src="https://cdn.countryflags.com/thumbs/poland/flag-square-250.png" alt="au" />
-              </IonCol>
-              <IonCol size="auto">
-                <IonSelect placeholder="+1">
-                  <IonSelectOption value="+1">USA</IonSelectOption>
-                  <IonSelectOption value="+34">Ukraine</IonSelectOption>
-                </IonSelect>
-              </IonCol>
-              <IonCol>
-                <IonInput placeholder="Mobile number"></IonInput>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
-        </IonItem>
-      </IonList>
-      <IonGrid>
+        <IonRow class="ion-text-center">
+          <IonCol>
+            <IonInput type="number" placeholder="0"></IonInput>
+          </IonCol>
+          <IonCol>
+            <IonInput type="number" placeholder="0"></IonInput>
+          </IonCol>
+          <IonCol>
+            <IonInput type="number" placeholder="0"></IonInput>
+          </IonCol>
+          <IonCol>
+            <IonInput type="number" placeholder="0"></IonInput>
+          </IonCol>
+        </IonRow>
+        <IonRow className="pu-margin-top-auto">
+          <IonCol>
+            <IonButton expand="block">Verify</IonButton>
+          </IonCol>
+        </IonRow>
         <IonRow>
           <IonCol>
-            <IonButton expand="block">Continue</IonButton>
-          </IonCol>
-        </IonRow>
-      </IonGrid>
-      <IonGrid>
-        <IonRow class="ion-text-center">
-          <IonCol>
-            <IonText>or</IonText>
-          </IonCol>
-        </IonRow>
-        <IonRow class="ion-padding ion-text-center">
-          <IonCol>
-            <IonIcon size="2" icon={logoFacebook} />
-          </IonCol>
-          <IonCol>
-            <IonIcon size="2" icon={logoApple} />
-          </IonCol>
-          <IonCol>
-            <IonIcon icon={logoGoogle} />
-          </IonCol>
-        </IonRow>
-        <IonRow class="ion-text-center">
-          <IonCol>
-            <IonText>
-              Don't have an account? <a href="#">Sign up</a>
-            </IonText>
+            <IonButton expand="block">Send code by mail</IonButton>
           </IonCol>
         </IonRow>
       </IonGrid>

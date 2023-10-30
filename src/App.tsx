@@ -22,6 +22,10 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { Walkthrough } from './views/walkthrough';
 import { Launch } from './views/launch';
+import { Signin } from './views/sign-in';
+import { Verification } from './views/verification';
+import { Home } from './views/home';
+import { Signup } from './views/sign-up';
 
 setupIonicReact();
 
@@ -29,8 +33,11 @@ const App: React.FC = () => (
   <IonApp className='pro-unity'>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path={'/'} component={Walkthrough} />
+        <Route exact path={'/'} component={Home} />
         <Route exact path={'/launch'} component={Launch} />
+        <Route exact path={'/sign-in'} component={Signin} />
+        <Route exact path={'/sign-up'} component={Signup} />
+        <Route exact path={'/verification'} component={Verification} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
