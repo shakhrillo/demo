@@ -7,132 +7,123 @@ import {
   IonGrid,
   IonRow,
   IonCol,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonFooter,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonCardContent,
 } from '@ionic/react';
-import './index.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import nasaStart from '../../../assets/images/nasa-start.jpeg';
-import nasaCenter from '../../../assets/images/nasa-center.jpeg';
-import nasaEnd from '../../../assets/images/nasa-end.jpeg';
 
 import 'swiper/css';
-import '@ionic/react/css/ionic-swiper.css';
+import 'swiper/css/pagination';
+
+import './index.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+import stepOneImg from '../../../assets/images/nasa-center.jpeg';
+import { useEffect, useState } from 'react';
 
 export default function (): JSX.Element {
+  const [swiper, setSwiper] = useState<any>(null); // [swiper, setSwiper
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const swiperData = [
+    {
+      title: 'We are the best job portal platform',
+      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quibusdam',
+      image: stepOneImg
+    },
+    {
+      title: 'The place where work finds you',
+      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quibusdam',
+      image: stepOneImg
+    },
+    {
+      title: 'Let\'s start your career with us now!',
+      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quibusdam',
+      image: stepOneImg
+    }
+  ];
+
+  useEffect(() => {
+  }, []);
+
   return (
     <IonPage>
       <IonContent>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          navigation={{ nextEl: '.next' }}
+        <Swiper 
+          pagination={{
+            'el': '.swiper-custom-pagination',
+            'type': 'custom',
+            'clickable': true
+          }}
+          style={{
+            padding: 0
+          }}
+          modules={[Pagination]}
+          onSlideChange={(swiper) => {
+            setCurrentSlide(swiper.activeIndex);
+          }}
+          onSwiper={(swiper) => {
+            setSwiper(swiper);
+          }}
         >
-          <SwiperSlide className='next'>
-            <IonGrid>
-              <IonRow>
-                <IonCol
-                  style={{
-                    background: `url(${nasaStart})`,
-                    backgroundSize: '100%',
-                    height: '500px',
-                  }}
-                ></IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonText color='primary'>
-                    <h1>We are the best job portal platform</h1>
-                  </IonText>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonText>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Unde sit sequi
-                  </IonText>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonButton shape='round' expand='block'>
-                    Next
-                  </IonButton>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </SwiperSlide>
-          <SwiperSlide className='next'>
-            <IonGrid>
-              <IonRow>
-                <IonCol
-                  style={{
-                    background: `url(${nasaCenter})`,
-                    backgroundSize: '100%',
-                    height: '500px',
-                  }}
-                ></IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonText color='primary'>
-                    <h1>The place where work finds you</h1>
-                  </IonText>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonText>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Unde sit sequi
-                  </IonText>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonButton shape='round' expand='block'>
-                    Next
-                  </IonButton>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </SwiperSlide>
-          <SwiperSlide>
-            <IonGrid>
-              <IonRow>
-                <IonCol
-                  style={{
-                    background: `url(${nasaEnd})`,
-                    backgroundSize: '100%',
-                    height: '500px',
-                  }}
-                ></IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonText color='primary'>
-                    <h1>Let's start your career with us now!</h1>
-                  </IonText>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonText>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Unde sit sequi
-                  </IonText>
-                </IonCol>
-              </IonRow>
-              <IonRow>
-                <IonCol>
-                  <IonButton shape='round' routerLink='/login' expand='block'>
-                    Get Started
-                  </IonButton>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </SwiperSlide>
+          {
+            swiperData.map((item, index) => (
+              <SwiperSlide key={index}>
+                <IonCard style={{
+                  margin: 0,
+                  boxShadow: 'none',
+                  border: 'none',
+                  borderRadius: 0,
+                }}>
+                  <IonImg src={item.image}></IonImg>
+                  <IonCardHeader>
+                    <IonCardTitle color="primary" className='ion-text-center'>{item.title}</IonCardTitle>
+                  </IonCardHeader>
+
+                  <IonCardContent className='ion-text-center'>{item.description}</IonCardContent>
+                </IonCard>
+              </SwiperSlide>
+            ))
+          }
         </Swiper>
       </IonContent>
+      <IonFooter className='ion-padding'>
+        <IonGrid>
+          <IonRow className='ion-justify-content-center'>
+            <IonCol>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+              }} className="swiper-custom-pagination">
+                {
+                  swiperData.map((item, index) => (
+                    <div key={index} className={`swiper-pagination-bullet ${index === currentSlide ? 'swiper-pagination-bullet-active' : ''}`}></div>
+                  ))
+                }
+              </div>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+        {
+          currentSlide < swiperData.length - 1 ? (
+            <IonButton onClick={
+              () => {
+                swiper.slideNext();
+              }
+            } shape='round' expand='block'>
+              Next
+            </IonButton>
+          ): <IonButton shape='round' expand='block' routerLink='/login'>
+            Finish
+          </IonButton>
+        }
+      </IonFooter>
     </IonPage>
   );
 }

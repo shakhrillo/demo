@@ -11,7 +11,7 @@ export default function(): JSX.Element {
                <IonRow class='head'>
                 <IonCol>
                     <IonText color="light">
-                        <h1>See how you can <br /> find a job quickly</h1>
+                        <h1>See how can <br /> find a job quickly</h1>
                     </IonText>
                     <IonButton color="light">Read more</IonButton>
                 </IonCol>

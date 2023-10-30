@@ -240,3 +240,25 @@ html {
   https://ionicframework.com/docs/layout/dynamic-font-scaling */
   --ion-dynamic-font: var(--ion-default-dynamic-font);
 }
+
+.pu-input {
+  --highlight-color-focused: transparent;
+  --highlight-color-valid: transparent;
+  --highlight-color-invalid: transparent;
+  --highlight-color: transparent;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ebebeb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.pu-input.has-focus {
+  border: 1px solid #3880FF;
+}
+
+.pu-card {
+  border-radius: 8px;
+}

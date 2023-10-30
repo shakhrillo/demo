@@ -76,15 +76,17 @@ import ApplicationSatges3 from './pages/account/applications/application-stages3
 import Language from './pages/account/language';
 import FillUserProfile from './pages/account/fillUserProfile';
 import { Tabs } from './components/Tabs';
+import { Forms } from './components/Forms';
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
+  <IonApp className='pro-unity'>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route exact path={'/'} component={Forms} />
         <Route path={'/tabs'} component={Tabs} />
-        <Route exact path={'/'} component={Splash} />
+        {/* <Route exact path={'/'} component={Splash} /> */}
         <Route path={'/welcome'} component={Welcome} />
         <Route path={'/walkthrough'} component={Walkthrough} />
         <Route path={'/login'} component={Login} />

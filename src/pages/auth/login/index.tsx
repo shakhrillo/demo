@@ -1,9 +1,6 @@
 import {
   IonContent,
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonItem,
   IonText,
   IonInput,
@@ -13,96 +10,80 @@ import {
   IonGrid,
   IonRow,
   IonImg,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonList,
+  IonIcon,
 } from '@ionic/react';
 import './index.css';
-import logo from '../../../assets/images/logo.jpeg';
-import facebookIcon from '../../../assets/images/facebook-icon.jpeg';
-import googleIcon from '../../../assets/images/google-icon.png';
-import appleIcon from '../../../assets/images/apple-icon.png';
 import mainLogo from '../../../assets/images/main-logo.png';
-
-import imgLogo from '../../../assets/images/logo.jpeg';
+import { mail, logoFacebook, lockClosed, eye, logoGoogle, logoApple } from 'ionicons/icons';
 
 export default function (): JSX.Element {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Login</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
       <IonContent>
-        <IonGrid style={{ padding: 10 }}>
-          <IonRow>
-            <IonCol class='login-container'>
-              <IonImg style={{ width: '40%' }} src={mainLogo}></IonImg>
-
-              <IonText>
-                <h1 style={{ fontSize: '28px', fontWeight: 'bold' }}>
-                  Create New Account
-                </h1>
-              </IonText>
-
-              <IonRow
-                style={{
-                  width: '100%',
-                }}
-              >
-                <IonCol>
-                  <IonInput
-                    placeholder='Email'
-                    type='email'
-                    class='custom'
-                  ></IonInput>
-                  <IonInput
-                    placeholder='Password'
-                    type='password'
-                    class='custom'
-                    style={{ marginTop: 15 }}
-                  ></IonInput>
-                </IonCol>
-              </IonRow>
-
+        <IonCard>
+          <IonImg src={mainLogo}></IonImg>
+          <IonCardHeader>
+            <IonCardTitle>Create New Account</IonCardTitle>
+          </IonCardHeader>
+          <IonCardContent>
+            <form className='loginForm'>
+              <IonList>
+                <IonItem>
+                  <IonIcon icon={mail}></IonIcon>
+                  <IonInput color="primary" inputmode="text" placeholder="Email"></IonInput>
+                </IonItem>
+                <IonItem>
+                  <IonIcon icon={lockClosed}></IonIcon>
+                  <IonInput color="primary" inputmode="text" placeholder="Password"></IonInput>
+                  <IonIcon icon={eye}></IonIcon>
+                </IonItem>
+              </IonList>
               <IonCheckbox labelPlacement='end'>Remember me</IonCheckbox>
-              <IonButton style={{ width: '100%' }} shape='round' expand='full'>
+              <IonButton shape='round' expand='full'>
                 Sign up
               </IonButton>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
-
-        <IonGrid style={{ padding: 10 }}>
-          <IonRow>
-            <IonCol class='login-container'>
+            </form>
+            <div className="loginFormContinueWith">
               <IonText>or continue with</IonText>
-              <br />
-              <IonItem>
-                <IonButton color='light' fill='outline' style={{ width: 55 }}>
-                  <IonImg
-                    style={{ width: 30, height: 30 }}
-                    src={facebookIcon}
-                  ></IonImg>
-                </IonButton>
-                <IonButton color='light' fill='outline' style={{ width: 55 }}>
-                  <IonImg
-                    style={{ width: 30, height: 30 }}
-                    src={googleIcon}
-                  ></IonImg>
-                </IonButton>
-                <IonButton color='light' fill='outline' style={{ width: 55 }}>
-                  <IonImg
-                    style={{ width: 30, height: 30 }}
-                    src={appleIcon}
-                  ></IonImg>
-                </IonButton>
-              </IonItem>
-              <IonText>
-                Already have an account? <a href='/register'>Sign in</a>
-              </IonText>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
+            </div>
+            <IonGrid>
+              <IonRow className='ion-justify-content-center'>
+                <IonCol size='3' className='ion-text-center'>
+                  <IonButton fill='outline'>
+                    <IonIcon icon={logoFacebook}></IonIcon>
+                  </IonButton>
+                </IonCol>
+                <IonCol size='3' className='ion-text-center'>
+                  <IonButton fill='outline'>
+                    <IonIcon icon={logoGoogle}></IonIcon>
+                  </IonButton>
+                </IonCol>
+                <IonCol size='3' className='ion-text-center'>
+                  <IonButton fill='outline'>
+                    <IonIcon icon={logoApple}></IonIcon>
+                  </IonButton>
+                </IonCol>
+              </IonRow>
+            </IonGrid>
+            <IonGrid>
+              <IonRow className='ion-align-items-center'>
+                <IonCol size='auto'>
+                  <IonText className='align-self-center'>Already have an account? </IonText>
+                </IonCol>
+                <IonCol size='auto'>
+                  <IonButton size='small' fill='clear' color='primary' routerLink='/login'>
+                    Sign in
+                  </IonButton>
+                </IonCol>
+              </IonRow>
+            </IonGrid>
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );

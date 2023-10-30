@@ -1,71 +1,62 @@
-.login-container {
+.loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
-  justify-content: space-between;
-  padding-top: 30px;
 }
 
-.settings {
-  gap: 15px;
+.loginFormContinueWith {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 40px 0;
 }
 
-.new-password {
-  gap: 25px;
+.loginFormContinueWith ion-text {
+  color: var(--ion-color-light-shade);
+  background-color: var(--ion-color-primary-contrast);
+  padding: 0 10px;
 }
 
-.user-settings {
-  align-items: start;
-  gap: 10px;
-}
-
-.contact-informations {
-  height: 100%;
-  justify-content: space-between;
-}
-
-ion-input.custom {
-  --background: #f9f8f8;
-  --placeholder-opacity: 0.8;
-  --border-radius: 10px;
-  --padding-bottom: 10px;
-  --padding-end: 10px;
-  --padding-start: 10px;
-  --padding-top: 10px;
-}
-
-ion-select.custom {
-  --background: #f9f8f8;
-  --placeholder-opacity: 0.8;
-  --border-radius: 10px;
-  --padding-bottom: 10px;
-  --padding-end: 10px;
-  --padding-start: 10px;
-  --padding-top: 10px;
-}
-
-ion-textarea.custom {
-  --background: #f9f8f8;
-  --placeholder-opacity: 0.8;
-  --border-radius: 10px;
-  --padding-bottom: 10px;
-  --padding-end: 10px;
-  --padding-start: 10px;
-  --padding-top: 10px;
-  height: 100px;
-}
-
-.file-input {
+.loginFormContinueWith::after {
+  content: '';
   width: 100%;
-  height: 60px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  background-color: #f8f8f8;
-  cursor: pointer;
-  text-align: center;
+  height: 1px;
+  background: var(--ion-color-light-shade);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
 }
+
+.loginForm ion-list {
+  width: 100%;
+}
+
+.loginForm ion-item {
+  --background: var(--ion-color-light);
+  --border-color: transparent;
+  --border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.loginForm ion-icon {
+  color: var(--ion-color-light-shade);
+}
+
+.loginForm ion-input {
+  margin: 0 10px;
+}
+
+.loginForm ion-button {
+  --background: var(--ion-color-primary);
+  --border-radius: 10px;
+  margin: 0 10px;
+  width: 100%;
+}
+
+.loginForm ion-checkbox {
+  --border-radius: 6px;
+  margin-bottom: 10px;
+}
+

@@ -24,8 +24,7 @@ export default function (): JSX.Element {
             <IonCol>
               <IonText>
                 <h1>
-                  Welcome to <br />
-                  Jobee!👋
+                  Welcome to Jobee!👋
                 </h1>
               </IonText>
             </IonCol>

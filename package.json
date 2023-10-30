@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test.e2e": "cypress run",
     "test.unit": "vitest",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ios": "ionic capacitor run ios -l --external"
   },
   "dependencies": {
     "@capacitor/android": "5.5.0",
