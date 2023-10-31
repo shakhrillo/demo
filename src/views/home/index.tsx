@@ -25,6 +25,7 @@ import { Signin } from '../sign-in';
 // import { Chat } from '../chat';
 import { PuCard } from '../../components/card';
 import { Chat } from '../chat';
+import { Account } from '../acoount';
 
 export const Home: React.FC = () => {
   const ionRouter = useIonRouter();
@@ -57,10 +58,7 @@ export const Home: React.FC = () => {
             <IonNavLink
               routerDirection='forward'
               component={() => {
-                if (token) {
-                  return <Chat />;
-                }
-                return <Signin />;
+                return <Account />;
               }}
             >
               <IonButton>
