@@ -1,4 +1,3 @@
-// Ionic card component
 import React from 'react';
 
 import { IonBackButton, IonCardTitle, IonHeader, IonToolbar } from '@ionic/react';

@@ -61,6 +61,7 @@ export const Search: React.FC = () => {
 
     setResults(data.filter((d) => d.title.toLowerCase().indexOf(query) > -1));
   };
+  
   return (
     <IonPage>
       <IonHeader className="ion-no-border">

@@ -19,5 +19,15 @@
   width: auto;
   margin-right: 16px;
 }
+
 .pu-input ion-input {
+  order: 1;
+}
+
+.pu-input ion-icon {
+  font-size: 16px;
+}
+
+.pu-input .pu-input-icon-end {
+  order: 3;
 }

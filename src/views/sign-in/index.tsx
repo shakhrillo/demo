@@ -21,7 +21,7 @@ import {
   IonToolbar,
   useIonRouter,
 } from "@ionic/react";
-import { logoApple, logoFacebook, logoGoogle } from "ionicons/icons";
+import { logoApple, logoFacebook, logoGoogle, searchCircle } from "ionicons/icons";
 import React, { useEffect, useRef, useState } from "react";
 import { Signup } from "../sign-up";
 import { Verification } from "../verification";
@@ -43,10 +43,12 @@ export const Signin: React.FC = () => {
 
   return (
     <IonPage>
-      <PuHeader />
+      <PuHeader isBackButton={true} />
       <IonContent class="ion-padding">
         <PuText color="primary" type="h3">Welcome Back!</PuText>
         <PuText>Start to consult your symptoms now</PuText>
+        <PuInput color="primary" type="search" icon={searchCircle} iconSlot="end" placeholder="Search" />
+        <PuInput color="primary" type="search" icon={searchCircle} placeholder="Search" />
         <PuInput color="primary" type="tel" placeholder="Mobile number" />
         <IonGrid>
           <IonRow>
