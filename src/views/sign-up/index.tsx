@@ -19,6 +19,8 @@ import {
 } from '@ionic/react';
 import { logoApple, logoFacebook, logoGoogle } from 'ionicons/icons';
 import React, { useRef, useState } from 'react';
+import { PuText } from '../../components/text';
+import { PuInput } from '../../components/input';
 
 export const Signup: React.FC = () => {
   const [isValid, setIsValid] = useState<boolean>(false);
@@ -89,10 +91,10 @@ export const Signup: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader className="ion-no-border">
+      <IonHeader className='ion-no-border'>
         <IonToolbar>
-          <IonButtons slot="start">
-            <IonBackButton defaultHref="/"></IonBackButton>
+          <IonButtons slot='start'>
+            <IonBackButton defaultHref='/'></IonBackButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
@@ -100,64 +102,54 @@ export const Signup: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-              <IonText>Welcome to Healthpedia</IonText>
+              <PuText color='primary' type='h3'>
+                Welcome to Healthpedia
+              </PuText>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonText>Let us get to know you better!</IonText>
+              <PuText>Let us get to know you better!</PuText>
             </IonCol>
           </IonRow>
         </IonGrid>
         <IonList>
           <IonItem>
-            <IonInput placeholder='First Name' ref={firstNameRef}></IonInput>
+            <PuInput placeholder='First Name' ref={firstNameRef}></PuInput>
           </IonItem>
           <IonItem>
-            <IonInput placeholder='Last Name' ref={lastNameRef}></IonInput>
+            <PuInput placeholder='Last Name' ref={lastNameRef}></PuInput>
           </IonItem>
           <IonItem>
-            <IonInput
+            <PuInput
               type='email'
               placeholder='Email'
               onIonInput={(event) => validate(event)}
               ref={emailRef}
-            ></IonInput>
+            ></PuInput>
           </IonItem>
           <IonItem>
             <IonGrid>
               <IonRow class='ion-align-items-center'>
-                <IonCol size='auto'>
-                  <img
-                    width={24}
-                    src='https://cdn.countryflags.com/thumbs/india/flag-square-250.png'
-                    alt='au'
-                  />
-                </IonCol>
-                <IonCol size='auto'>
-                  <IonSelect placeholder='+1' value={+1} ref={selectRef}>
-                    <IonSelectOption value='+1'>USA</IonSelectOption>
-                    <IonSelectOption value='+34'>Ukraine</IonSelectOption>
-                  </IonSelect>
-                </IonCol>
                 <IonCol>
-                  <IonInput
-                    type='number'
+                  <PuInput
+                    color='primary'
+                    type='tel'
                     placeholder='Mobile number'
                     ref={mobileNumberRef}
-                  ></IonInput>
+                  ></PuInput>
                 </IonCol>
               </IonRow>
             </IonGrid>
           </IonItem>
           <IonItem>
-            <IonInput
+            <PuInput
               placeholder='Password'
               type='password'
               helperText='*Minimum 6 characters'
               ref={passwordRef}
               onIonInput={(event) => passwordLen(event)}
-            ></IonInput>
+            ></PuInput>
           </IonItem>
         </IonList>
         <IonGrid>
@@ -176,7 +168,7 @@ export const Signup: React.FC = () => {
         <IonGrid>
           <IonRow class='ion-text-center'>
             <IonCol>
-              <IonText>or</IonText>
+              <PuText>or</PuText>
             </IonCol>
           </IonRow>
           <IonRow class='ion-padding ion-text-center'>
@@ -192,17 +184,17 @@ export const Signup: React.FC = () => {
           </IonRow>
           <IonRow class='ion-text-center'>
             <IonCol>
-              <IonText>
+              <PuText>
                 Already have an account? <a href='#'>Login</a>
-              </IonText>
+              </PuText>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonText>
+              <PuText>
                 By signing up, you agree to our <a href='#'>Terms of Use</a> and{' '}
                 <a href='#'>Privacy Policy</a>
-              </IonText>
+              </PuText>
             </IonCol>
           </IonRow>
         </IonGrid>
