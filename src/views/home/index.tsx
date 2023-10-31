@@ -26,6 +26,7 @@ import { Signin } from '../sign-in';
 import { PuCard } from '../../components/card';
 import { Chat } from '../chat';
 import { Account } from '../acoount';
+import { PuImage } from '../../components/image';
 
 export const Home: React.FC = () => {
   const ionRouter = useIonRouter();
