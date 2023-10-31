@@ -19,11 +19,9 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import Main from "./views/main";
-import { Search } from "./views/search";
-import { SpecialDetail } from "./views/specialist-detail";
 
 setupIonicReact();
 
-const App: React.FC = () => <IonNav root={() => <SpecialDetail />}></IonNav>;
+const App: React.FC = () => <IonNav root={() => <Main />}></IonNav>;
 
 export default App;
