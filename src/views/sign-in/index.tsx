@@ -26,6 +26,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { Signup } from "../sign-up";
 import { Verification } from "../verification";
 import counriesCode from "./countries.json";
+import { PuHeader } from "../../components/header";
+import { PuText } from "../../components/text";
+import { PuInput } from "../../components/input";
 
 export const Signin: React.FC = () => {
   const ionRouter = useIonRouter();
@@ -40,57 +43,11 @@ export const Signin: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader className="ion-no-border">
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonBackButton defaultHref="/"></IonBackButton>
-          </IonButtons>
-        </IonToolbar>
-      </IonHeader>
+      <PuHeader />
       <IonContent class="ion-padding">
-        <IonGrid>
-          <IonRow>
-            <IonCol>
-              <IonText>Welcome Back!</IonText>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-              <IonText>Start to consult your symptoms now</IonText>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
-        <IonList>
-          <IonItem>
-            <IonGrid>
-              <IonRow class="ion-align-items-center">
-                <IonCol size="auto">
-                  <img
-                    width={24}
-                    src="https://cdn.countryflags.com/thumbs/poland/flag-square-250.png"
-                    alt="au"
-                  />
-                </IonCol>
-                <IonCol size="auto">
-                  <IonSelect placeholder="+1" ref={selectRef}>
-                    {counriesCode.map((item) => (
-                      <IonSelectOption key={item.code} value={item.dial_code}>
-                        {item.dial_code} {item.code}
-                      </IonSelectOption>
-                    ))}
-                  </IonSelect>
-                </IonCol>
-                <IonCol>
-                  <IonInput
-                    ref={mobileNumberRef}
-                    type="number"
-                    placeholder="Mobile number"
-                  ></IonInput>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-          </IonItem>
-        </IonList>
+        <PuText color="primary" type="h3">Welcome Back!</PuText>
+        <PuText>Start to consult your symptoms now</PuText>
+        <PuInput color="primary" type="tel" placeholder="Mobile number" />
         <IonGrid>
           <IonRow>
             <IonCol>

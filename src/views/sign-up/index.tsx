@@ -1,8 +1,11 @@
 import {
+  IonBackButton,
   IonButton,
+  IonButtons,
   IonCol,
   IonContent,
   IonGrid,
+  IonHeader,
   IonIcon,
   IonInput,
   IonItem,
@@ -12,6 +15,7 @@ import {
   IonSelect,
   IonSelectOption,
   IonText,
+  IonToolbar,
 } from '@ionic/react';
 import { logoApple, logoFacebook, logoGoogle } from 'ionicons/icons';
 import React, { useRef, useState } from 'react';
@@ -85,6 +89,13 @@ export const Signup: React.FC = () => {
 
   return (
     <IonPage>
+      <IonHeader className="ion-no-border">
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonBackButton defaultHref="/"></IonBackButton>
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>
       <IonContent class='ion-padding'>
         <IonGrid>
           <IonRow>

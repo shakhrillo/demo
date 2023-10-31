@@ -1,0 +1,23 @@
+.pu-input {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0 16px;
+  margin: 8px 0;
+  border: 1px solid var(--ion-color-medium);
+}
+
+.pu-input ion-img {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  margin-right: 16px;
+}
+
+.pu-input ion-select {
+  width: auto;
+  margin-right: 16px;
+}
+.pu-input ion-input {
+}

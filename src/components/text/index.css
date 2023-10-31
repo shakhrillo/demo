@@ -1,0 +1,27 @@
+.pu-text {
+  display: block;
+}
+
+.pu-text.h1 {
+
+}
+
+.pu-text.h2 {
+  
+}
+
+.pu-text.h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+}
+
+.pu-text.h4 {
+  
+}
+
+.pu-text.caption {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 350;
+}
