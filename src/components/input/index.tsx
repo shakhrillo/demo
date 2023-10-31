@@ -23,7 +23,13 @@ export const PuInput: React.FC<InputProps> = ({
 
   return (
     <div className='pu-input'>
-      <IonIcon icon={icon} className={iconSlot === 'end' ? 'pu-input-icon-end' : ''} />
+      {
+        icon && iconSlot === 'start' && <IonIcon icon={icon} className='pu-input-icon-start' />
+      }
+
+      {
+        icon && iconSlot === 'end' && <IonIcon icon={icon} className='pu-input-icon-end' />
+      }
 
       {
         type === 'tel' && <>

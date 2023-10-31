@@ -29,9 +29,9 @@ import counriesCode from "./countries.json";
 import { PuHeader } from "../../components/header";
 import { PuText } from "../../components/text";
 import { PuInput } from "../../components/input";
+import { PuButton } from "../../components/button";
 
 export const Signin: React.FC = () => {
-  const ionRouter = useIonRouter();
   const [btnDisabled, setBtnDisabled] = useState<boolean>(false);
   const mobileNumberRef = useRef<any>(null);
   const selectRef = useRef<HTMLIonSelectElement>(null);
@@ -45,36 +45,13 @@ export const Signin: React.FC = () => {
     <IonPage>
       <PuHeader isBackButton={true} />
       <IonContent class="ion-padding">
-        <PuText color="primary" type="h3">Welcome Back!</PuText>
-        <PuText>Start to consult your symptoms now</PuText>
-        <PuInput color="primary" type="search" icon={searchCircle} iconSlot="end" placeholder="Search" />
-        <PuInput color="primary" type="search" icon={searchCircle} placeholder="Search" />
+        <PuText type="h3">Welcome Back!</PuText>
+        <PuText type="caption">Start to consult your symptoms now</PuText>
         <PuInput color="primary" type="tel" placeholder="Mobile number" />
-        <IonGrid>
-          <IonRow>
-            <IonCol>
-              <IonNavLink
-              // routerDirection="forward"
-              // component={() => <Verification />}
-              >
-                <IonButton
-                  id="open-loading"
-                  disabled={btnDisabled}
-                  onClick={handleButton}
-                  expand="block"
-                >
-                  Continue
-                </IonButton>
-                <IonLoading
-                  trigger="open-loading"
-                  message="Loading..."
-                  duration={3000}
-                  spinner="circles"
-                />
-              </IonNavLink>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
+        <IonNavLink routerDirection="forward" component={() => <Verification />}>
+          <PuButton expand="block">Continue</PuButton>
+        </IonNavLink>
+        <PuText className="ion-text-center">or</PuText>
         <IonGrid>
           <IonRow class="ion-text-center">
             <IonCol>

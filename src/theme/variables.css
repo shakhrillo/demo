@@ -1,6 +1,15 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../assets/fonts/open-sans.woff2') format('woff2');
+}
+
+* {
+  font-family: Open Sans;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** transparent **/
