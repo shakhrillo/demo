@@ -15,13 +15,16 @@ import {
   IonRow,
   IonSearchbar,
   IonText,
+  IonTitle,
   IonToolbar,
   useIonRouter,
 } from "@ionic/react";
 import { star } from "ionicons/icons";
 import React, { useState } from "react";
 
-export const SpecialDetail: React.FC = () => {
+export const SpecialDetail: any = (props: {
+  title: string
+}) => {
   const ionRouter = useIonRouter();
   const data = [
     {
@@ -56,7 +59,11 @@ export const SpecialDetail: React.FC = () => {
   return (
     <IonPage>
       <IonHeader className="ion-no-border">
-        <IonToolbar></IonToolbar>
+        <IonToolbar>
+          <IonTitle>
+            {props.title}
+          </IonTitle>
+        </IonToolbar>
       </IonHeader>
       <IonContent class="ion-padding">
         <IonGrid>

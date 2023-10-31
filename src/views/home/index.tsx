@@ -27,6 +27,8 @@ import { PuCard } from '../../components/card';
 import { Chat } from '../chat';
 import { Account } from '../acoount';
 import { PuImage } from '../../components/image';
+import { Search } from '../search';
+import { SpecialDetail } from '../specialist-detail';
 
 export const Home: React.FC = () => {
   const ionRouter = useIonRouter();
@@ -87,18 +89,33 @@ export const Home: React.FC = () => {
               <IonText>Specialists Category</IonText>
             </IonCol>
             <IonCol size='auto'>
-              <IonButton>See all</IonButton>
+              <IonNavLink
+                routerDirection='forward'
+                component={() => {
+                  return <Search />;
+                }}
+              >
+                <IonButton>See all</IonButton>
+              </IonNavLink>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol size='4'>
-              <IonCard>
-                <IonCardHeader>
-                  <IonCardSubtitle>Cardiologists</IonCardSubtitle>
-                </IonCardHeader>
+              <IonNavLink
+                routerDirection='forward'
+                component={() => {
+                  return <SpecialDetail title={'Cardiologists'} />;
+                }}
+              >
+                {/* <IonButton>See all</IonButton> */}
+                <IonCard>
+                  <IonCardHeader>
+                    <IonCardSubtitle>Cardiologists</IonCardSubtitle>
+                  </IonCardHeader>
 
-                <IonCardContent>213 doctors</IonCardContent>
-              </IonCard>
+                  <IonCardContent>213 doctors</IonCardContent>
+                </IonCard>
+              </IonNavLink>
             </IonCol>
             <IonCol size='4'>
               <IonCard>
