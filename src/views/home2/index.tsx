@@ -2,6 +2,7 @@ import { IonButton, IonAvatar, IonButtons, IonCard, IonCardContent, IonCardHeade
 import { mailOutline, personOutline, star } from "ionicons/icons";
 import React, { useEffect, useState } from "react";
 import { Signin } from "../sign-in";
+import { SpecialDetail } from "../specialist-detail";
 import { PuCard } from "../../components/card";
 
 const data = [
@@ -73,7 +74,7 @@ export const Home2: React.FC = () => {
               </IonText>
             </IonCol>
             <IonCol size="auto">
-              <IonNavLink component={() => <Signin />}>
+              <IonNavLink component={() => <SpecialDetail />}>
                 <IonButton>
                     See all
                 </IonButton>
