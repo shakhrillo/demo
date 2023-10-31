@@ -18,33 +18,33 @@ import {
   IonText,
   IonToolbar,
   useIonRouter,
-} from "@ionic/react";
-import { sendOutline } from "ionicons/icons";
-import React from "react";
+} from '@ionic/react';
+import { sendOutline } from 'ionicons/icons';
+import React from 'react';
 
-export const Chat: React.FC = () => {
+export const Chat: any = (props: { title: string }) => {
   const ionRouter = useIonRouter();
 
   return (
     <IonPage>
-      <IonHeader className="ion-no-border">
-        <IonToolbar></IonToolbar>
+      <IonHeader className='ion-no-border'>
+        <IonToolbar>{props.title}</IonToolbar>
       </IonHeader>
-      <IonContent class="ion-padding" color={"light"}>
+      <IonContent class='ion-padding' color={'light'}>
         <IonGrid
-          // style={{
-          //   display: "flex",
-          //   flexDirection: "column",
-          //   justifyContent: "end",
-          //   height: "100%",
-          // }}
+        // style={{
+        //   display: "flex",
+        //   flexDirection: "column",
+        //   justifyContent: "end",
+        //   height: "100%",
+        // }}
         >
           <IonRow>
-            <IonCol size="2">
+            <IonCol size='2'>
               <IonAvatar>
                 <img
                   alt="Silhouette of a person's head"
-                  src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                  src='https://ionicframework.com/docs/img/demos/avatar.svg'
                 />
               </IonAvatar>
             </IonCol>
@@ -58,34 +58,34 @@ export const Chat: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonCard color={"danger"}>
+              <IonCard color={'danger'}>
                 <IonCardContent>
                   <IonText>Hi, dr. Joe here. How may I help you?</IonText>
                 </IonCardContent>
               </IonCard>
             </IonCol>
-            <IonCol size="auto">
+            <IonCol size='auto'>
               <IonAvatar>
                 <img
                   alt="Silhouette of a person's head"
-                  src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                  src='https://ionicframework.com/docs/img/demos/avatar.svg'
                 />
               </IonAvatar>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonCard color={"danger"}>
+              <IonCard color={'danger'}>
                 <IonCardContent>
                   <IonText>Hi, dr. Joe here. How may I help you?</IonText>
                 </IonCardContent>
               </IonCard>
             </IonCol>
-            <IonCol size="auto">
+            <IonCol size='auto'>
               <IonAvatar>
                 <img
                   alt="Silhouette of a person's head"
-                  src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                  src='https://ionicframework.com/docs/img/demos/avatar.svg'
                 />
               </IonAvatar>
             </IonCol>
@@ -95,9 +95,9 @@ export const Chat: React.FC = () => {
       <IonFooter>
         <IonRow>
           <IonCol>
-            <IonInput fill="outline" placeholder="Write message"></IonInput>
+            <IonInput fill='outline' placeholder='Write message'></IonInput>
           </IonCol>
-          <IonCol size="auto">
+          <IonCol size='auto'>
             <IonButton>
               <IonIcon icon={sendOutline}></IonIcon>
             </IonButton>

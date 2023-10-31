@@ -1,4 +1,5 @@
 import {
+  IonAvatar,
   IonButton,
   IonButtons,
   IonCard,
@@ -19,7 +20,7 @@ import {
   IonToolbar,
   useIonRouter,
 } from '@ionic/react';
-import { mailOutline, personOutline } from 'ionicons/icons';
+import { mailOutline, personOutline, star } from 'ionicons/icons';
 import React from 'react';
 import { Signin } from '../sign-in';
 // import { Chat } from '../chat';
@@ -29,6 +30,7 @@ import { Account } from '../acoount';
 import { PuImage } from '../../components/image';
 import { Search } from '../search';
 import { SpecialDetail } from '../specialist-detail';
+import { ellipse } from 'ionicons/icons';
 
 export const Home: React.FC = () => {
   const ionRouter = useIonRouter();
@@ -136,6 +138,59 @@ export const Home: React.FC = () => {
               </IonCard>
             </IonCol>
           </IonRow>
+          {/* new */}
+          <IonRow>
+            <IonCol>
+              <IonCard>
+                <IonRow>
+                  <IonCol size='2'>
+                    <IonAvatar>
+                      <img
+                        alt="Silhouette of a person's head"
+                        src='https://ionicframework.com/docs/img/demos/avatar.svg'
+                      />
+                    </IonAvatar>
+                  </IonCol>
+                  <IonCol>
+                    <IonCardHeader>
+                      <IonCardSubtitle>
+                        <IonIcon
+                          size='default'
+                          color='warning'
+                          icon={star}
+                        ></IonIcon>
+                        <IonText> 4.5 Cardiologists</IonText>
+                      </IonCardSubtitle>
+                      <IonCardTitle>
+                        <IonCardTitle>dr. Usman Yusuf</IonCardTitle>
+                      </IonCardTitle>
+                    </IonCardHeader>
+
+                    <IonCardContent>
+                      <IonRow>
+                        <IonCol size='8'>
+                          <IonText color={'danger'}>$30</IonText>
+                        </IonCol>
+                        <IonCol size='4'>
+                          <IonNavLink
+                            routerDirection='forward'
+                            component={() => {
+                              return <Chat title={'dr. Usman Yusuf'} />;
+                            }}
+                          >
+                            <IonButton slot='end' size='small'>
+                              Chat
+                            </IonButton>
+                          </IonNavLink>
+                        </IonCol>
+                      </IonRow>
+                    </IonCardContent>
+                  </IonCol>
+                </IonRow>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+          {/* new */}
         </IonGrid>
       </IonContent>
     </IonPage>
