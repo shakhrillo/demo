@@ -1,0 +1,26 @@
+.pu-card {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pu-card ion-card-header {
+  margin-bottom: auto;
+}
+
+.pu-card ion-card-title {
+  order: 1;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.pu-card ion-card-subtitle {
+  order: 2;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 300;
+}
