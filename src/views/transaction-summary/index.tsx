@@ -20,6 +20,12 @@ import {
 } from "@ionic/react";
 import React from "react";
 
+const list = [
+  { title: "Total Payment", desc: "Session fee for 45 minutes", price: "60" },
+  { title: "Promo Applied", desc: "Coupon discount", price: "6" },
+  { title: "To pay", price: "54" },
+];
+
 export const TransactionSummary: React.FC = () => {
   const ionRouter = useIonRouter();
 
@@ -52,44 +58,21 @@ export const TransactionSummary: React.FC = () => {
             </IonCardHeader>
           </IonCard>
           <IonList lines="none">
-            <IonRow>
-              <IonItem style={{ width: "100%" }}>
-                <IonCol>
-                  <IonText>
-                    <h5>Total Payment</h5>
-                  </IonText>
-                  <IonText>Session fee for 45 minutes</IonText>
-                </IonCol>
-                <IonCol size="auto">
-                  <IonText>$60</IonText>
-                </IonCol>
-              </IonItem>
-            </IonRow>
-            <IonRow>
-              <IonItem style={{ width: "100%" }}>
-                <IonCol>
-                  <IonText>
-                    <h5>Promo Applied</h5>
-                  </IonText>
-                  <IonText>Coupon discount</IonText>
-                </IonCol>
-                <IonCol size="auto">
-                  <IonText>$6</IonText>
-                </IonCol>
-              </IonItem>
-            </IonRow>
-            <IonRow>
-              <IonItem style={{ width: "100%" }}>
-                <IonCol>
-                  <IonText>
-                    <h5>To pay</h5>
-                  </IonText>
-                </IonCol>
-                <IonCol size="auto">
-                  <IonText>$54</IonText>
-                </IonCol>
-              </IonItem>
-            </IonRow>
+            {list.map((item) => (
+              <IonRow>
+                <IonItem style={{ width: "100%" }}>
+                  <IonCol>
+                    <IonText>
+                      <h5>{item?.title}</h5>
+                    </IonText>
+                    <IonText>{item.desc}</IonText>
+                  </IonCol>
+                  <IonCol size="auto">
+                    <IonText>${item?.price}</IonText>
+                  </IonCol>
+                </IonItem>
+              </IonRow>
+            ))}
           </IonList>
           <IonRow>
             <IonItem lines="none" style={{ width: "100%" }}>
@@ -107,7 +90,7 @@ export const TransactionSummary: React.FC = () => {
           <IonRow>
             <h5>Payment Method</h5>
             <IonItem lines="none" style={{ width: "100%" }}>
-              <IonCol size="auto">
+              <IonCol size="2">
                 <img
                   src="https://logowik.com/content/uploads/images/219_visa.jpg"
                   alt=""

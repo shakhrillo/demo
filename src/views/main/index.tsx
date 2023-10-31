@@ -31,7 +31,11 @@ function Main() {
       <IonTabs>
         <IonRouterOutlet>
           <Redirect exact path="/" to="/home" />
-          <Route path="/home" render={() => <AboutDoctor />} exact={true} />
+          <Route
+            path="/home"
+            render={() => <TransactionSummary />}
+            exact={true}
+          />
           <Route path="/explore" render={() => <Explore />} exact={true} />
           <Route path="/blog" render={() => <Blog />} exact={true} />
           <Route

@@ -71,7 +71,7 @@ export const AboutDoctor: React.FC = () => {
           </IonCard>
           <IonNavLink
             component={() => {
-              return <Chat />;
+              return <Chat title={"dr. Joe Smith"} />;
             }}
           >
             <IonButton expand="block">Chat</IonButton>
